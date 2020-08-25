@@ -1,0 +1,926 @@
+:root {
+	--subtitle-font: bold 13rem/20rem "Titillium Web", sans-serif;
+}
+
+@font-face {
+	font-family: 'Archive';
+	src        : url('../font/archive/archive.woff2') format('woff2'), url('../font/archive/archive.woff') format('woff');
+	font-weight: 400;
+	font-style : normal;
+}
+
+@font-face {
+	font-family: 'Titillium Web';
+	src        : url('../font/titillium/titilliumweb.woff2') format('woff2'), url('../font/titillium/titilliumweb.woff') format('woff');
+	font-weight: 400;
+	font-style : normal;
+}
+
+@font-face {
+	font-family: 'Titillium Web';
+	src        : url('../font/titillium/titilliumwebbold.woff2') format('woff2'), url('../font/titillium/titilliumwebbold.woff') format('woff');
+	font-weight: 700;
+	font-style : normal;
+}
+
+html {
+	font-family   : "Titillium Web", sans-serif;
+	font-size     : 1px;
+	letter-spacing: 0.5em;
+}
+
+body {
+	margin: 0;
+}
+
+ul {
+	list-style: none;
+	margin    : 0;
+	padding   : 0;
+}
+
+a {
+	text-decoration: none;
+}
+
+input[type=checkbox] {
+	display: none;
+}
+
+.title {
+	color         : #2D0027;
+	font          : 18rem/18rem "Archive", sans-serif;
+	letter-spacing: initial;
+	text-align    : center;
+}
+
+.navbar {
+	display        : flex;
+	justify-content: space-between;
+}
+
+.navbar_top {
+	background-color: #FFF8FE;
+	height          : 47rem;
+	padding         : 0 20rem;
+	position        : relative;
+}
+
+.navbar__item {
+	display        : flex;
+	flex-direction : column;
+	height         : 47rem;
+	justify-content: flex-end;
+	text-align     : center;
+}
+
+/* белые поля слева и справа от иконки меню при клике  */
+.navbar__item_nav-menu::before,
+.navbar__item_nav-menu::after {
+	background: white;
+	content   : "";
+	display   : none;
+	height    : inherit;
+	left      : 0;
+	position  : absolute;
+	width     : 20rem;
+	z-index   : 1;
+}
+
+.navbar__item_nav-menu::after {
+	left: 46rem;
+}
+
+.navbar__caption {
+	color  : #A0148E;
+	font   : 9rem/14rem "Titillium Web", sans-serif;
+	margin : 4rem 0 4rem;
+	opacity: 0.6;
+}
+
+.nav-menu,
+.profile__list,
+.location__select-city,
+.catalog-list__sublist {
+	display: none;
+}
+
+.nav-menu {
+	background-color: white;
+	box-sizing      : border-box;
+	left            : 0;
+	text-align      : left;
+	top             : 47rem;
+	padding         : 4rem 0 28rem;
+	position        : absolute;
+	width           : 100vw;
+	z-index         : 10;
+}
+
+.nav-menu__item {
+	border-bottom: 2rem solid #F5F3F5;
+	margin-top   : 11rem;
+}
+
+.nav-menu__item a,
+.profile__item a {
+	text-align     : left;
+	border-bottom  : 2rem solid #FFF8FE;
+	box-sizing     : border-box;
+	color          : #2D0027;
+	display        : block;
+	font-size      : 12rem;
+	height         : 40rem;
+	line-height    : 38rem;
+	margin         : 0 20rem;
+	text-decoration: none;
+}
+
+.nav-menu__item li:last-of-type a {
+	border: none;
+}
+
+.catalog-list {
+	overflow-y: hidden;
+}
+
+.catalog-list__item,
+.catalog-list__item_sublist {
+	box-sizing: border-box;
+	position  : relative;
+	width     : 100vw;
+}
+
+.catalog-list__item_select,
+.catalog-list__item_show-all,
+.catalog-list__item_back {
+	font-weight: bold;
+}
+
+.catalog-list__item_select {
+	background-color: rgba(160, 20, 142, .05);
+	border-bottom   : rgba(160, 20, 142, .05);
+	font-size       : 13rem;
+	line-height     : 35rem;
+}
+
+.catalog-list__item:first-of-type {
+	font-weight: bold;
+}
+
+.catalog-list__item_back {
+	font-size  : 13rem;
+	line-height: 40rem;
+}
+
+.catalog-list__sublist {
+	background-color: white;
+	position        : absolute;
+	top             : 0;
+	z-index         : 20;
+}
+
+.catalog-list__sublist a {
+	padding-left: 15rem;
+}
+
+.catalog-list__tick,
+.catalog-list__tick_back {
+	border-top  : 1.5rem solid #967c92;
+	border-right: 1.5rem solid #967c92;
+	height      : 5rem;
+	position    : absolute;
+	top         : 16rem;
+	transform   : rotate(45deg);
+	right       : 19rem;
+	width       : 5rem;
+}
+
+.catalog-list__tick_back {
+	left     : 22rem;
+	right    : unset;
+	transform: rotate(225deg);
+}
+
+.catalog-list__item:first-of-type .catalog-list__tick {
+	display: none;
+}
+
+/* ! хэдэр кнопки  */
+
+#nav-menu-checkbox:checked~.header .nav-menu,
+#nav-menu-checkbox:checked~.header .navbar__item_nav-menu::before,
+#nav-menu-checkbox:checked~.header .navbar__item_nav-menu::after {
+	display: block;
+}
+
+#nav-menu-checkbox:checked~.header .navbar__item_nav-menu {
+	background-color: white;
+	z-index         : 1;
+}
+
+/* наложение цветного слоя на body при клике nav-menu */
+
+.main-content-layer::after {
+	content       : "";
+	background    : #3F0738;
+	bottom        : 0;
+	display       : none;
+	pointer-events: none;
+	position      : absolute;
+	opacity       : 0.2;
+	top           : 0;
+	width         : 100%;
+}
+
+#nav-menu-checkbox:checked~.main-content-layer::after {
+	display: block;
+}
+
+/* кнопки каталога */
+
+/* кнопки отрытия списков */
+
+#catalog-list-checkbox-guitar:checked~.header .catalog-list-checkbox-guitar {
+	display: inherit;
+	top    : -42rem;
+}
+
+#catalog-list-checkbox-guitar-classic:checked~.header .catalog-list-checkbox-guitar-classic {
+	display: inherit;
+	top    : -120rem;
+}
+
+#catalog-list-checkbox-guitar-acoustic-bass:checked~.header .catalog-list-checkbox-guitar-acoustic-bass {
+	display: inherit;
+	top    : -200rem;
+}
+
+#catalog-list-checkbox-microphone:checked~.header .catalog-list-checkbox-microphone {
+	display: inherit;
+	top    : -162rem;
+}
+
+#catalog-list-checkbox-accordion:checked~.header .catalog-list-checkbox-accordion {
+	display: inherit;
+	top    : -562rem;
+}
+
+/* убираем торчащие li */
+
+#catalog-list-checkbox-guitar:checked~.header .catalog-list {
+	height: 644rem;
+}
+
+#catalog-list-checkbox-guitar-classic:checked~.header .catalog-list {
+	height: 520rem;
+}
+
+#catalog-list-checkbox-guitar-acoustic-bass:checked~.header .catalog-list {
+	height: 520rem;
+}
+
+#catalog-list-checkbox-microphone:checked~.header .catalog-list {
+	height: 478rem;
+}
+
+#catalog-list-checkbox-accordion:checked~.header .catalog-list {
+	height: 478rem;
+}
+
+/* убираем пункты nav-menu */
+
+#catalog-list-checkbox-guitar:checked~.header .nav-menu__item_open-sublist,
+#catalog-list-checkbox-guitar-classic:checked~.header .nav-menu__item_open-sublist,
+#catalog-list-checkbox-guitar-acoustic-bass:checked~.header .nav-menu__item_open-sublist,
+#catalog-list-checkbox-microphone:checked~.header .nav-menu__item_open-sublist,
+#catalog-list-checkbox-accordion:checked~.header .nav-menu__item_open-sublist {
+	display: none;
+}
+
+.icon-menu__item {
+	font-size      : 13rem;
+	font-weight    : bold;
+	line-height    : 38rem;
+	text-decoration: none;
+}
+
+.icon-menu__item img {
+	margin-right: 12rem;
+}
+
+.icon-menu__item .basket {
+	width: 17rem;
+}
+
+.icon-menu__item .profile-icon {
+	width: 15rem;
+}
+
+.icon-menu__item .compare {
+	width: 15rem;
+}
+
+.icon-menu__item .favorite {
+	width: 16rem;
+}
+
+.phone {
+	color          : #2D0027;
+	display        : block;
+	font           : bold 18rem/27rem "Titillium Web", sans-serif;
+	opacity        : 0.5;
+	text-align     : center;
+	text-decoration: none;
+}
+
+.nav-menu__phone {
+	margin: 17rem 0;
+}
+
+.socialnet {
+	align-items    : center;
+	display        : flex;
+	height         : 24rem;
+	justify-content: space-between;
+	opacity        : 0.15;
+	width          : 150rem;
+}
+
+.nav-menu__socialnet {
+	margin: 0 auto;
+}
+
+.profile {
+	position: relative;
+}
+
+.profile__list {
+	background-color: white;
+	border-radius   : 4rem;
+	font-weight     : bold;
+	left            : -155rem;
+	padding         : 9rem 0 7rem;
+	position        : absolute;
+	top             : 47rem;
+	width           : 280rem;
+	z-index         : 10;
+}
+
+.profile__item:first-of-type a {
+	color: #00C2E0;
+}
+
+.profile__item:nth-of-type(2) a {
+	color: #0079BF;
+}
+
+/* открытие меню профиля */
+
+#profile-checkbox:checked~.header .profile__list {
+	display: block;
+}
+
+#profile-checkbox:checked~.main-content-layer::after {
+	display: block;
+}
+
+#profile-checkbox:checked~.header .profile {
+	background-color: white;
+	margin          : 0 -10rem;
+	padding         : 0 10rem;
+	z-index         : 1;
+}
+
+.navbar_bottom {
+	align-items: center;
+	height     : 42rem;
+	position   : relative;
+}
+
+.logo {
+	display    : block;
+	height     : 20rem;
+	margin-left: 18rem;
+	width      : 90rem;
+}
+
+.location {
+	align-items: center;
+	display    : flex;
+	height     : 42rem;
+	padding    : 0 18rem 0 19rem;
+	text-align : right;
+}
+
+.location__current-city {
+	color       : #A0148E;
+	font        : bold 13px/20px "Titillium Web", sans-serif;
+	margin-right: 15rem;
+}
+
+.location__tick {
+	position: relative;
+}
+
+.location__tick>span {
+	border-right : 1.5px solid #A0148E;
+	border-bottom: 1.5px solid #A0148E;
+	display      : block;
+	height       : 5rem;
+	position     : absolute;
+	right        : 1rem;
+	top          : 6rem;
+	transform    : rotate(45deg);
+	transition   : 0.5s;
+	width        : 5rem;
+}
+
+.location__select-city {
+	background-color         : #fff;
+	border-top-left-radius   : 4rem;
+	border-bottom-left-radius: 4rem;
+	left                     : 20rem;
+	padding                  : 22rem 20rem 7rem 0;
+	position                 : absolute;
+	text-align               : left;
+	top                      : 42rem;
+	right                    : 0;
+	z-index                  : 1;
+}
+
+.location__form-search_margin {
+	margin: 0 0 15rem 20rem;
+}
+
+.city-list {
+	height    : 356rem;
+	overflow-y: scroll;
+}
+
+/* фон первого пункта */
+.city-list li:first-child a {
+	border-bottom: transparent;
+}
+
+.city-list li:first-of-type {
+	background-color: rgba(160, 20, 142, .05);
+}
+
+::-webkit-scrollbar {
+	width: 4rem;
+}
+
+::-webkit-scrollbar-track {
+	background-color: #FFF8FE;
+	margin-bottom   : -77rem;
+}
+
+::-webkit-scrollbar-thumb {
+	background-image: linear-gradient(#a0148e 50%, transparent 50%);
+}
+
+.city-list__item {
+	border-bottom: 2px solid #FFF8FE;
+	box-sizing   : border-box;
+	color        : #2D0027;
+	display      : block;
+	font-size    : 12rem;
+	height       : 40rem;
+	line-height  : 35rem;
+	margin       : 0 18rem 0 20rem;
+}
+
+#location-checkbox:checked~.header .location__select-city {
+	display: initial;
+}
+
+#location-checkbox:checked~.main-content-layer::after {
+	display: block;
+}
+
+#location-checkbox:checked~.main-content-layer {
+	overflow: hidden;
+}
+
+#location-checkbox:checked~.header .location__tick>span {
+	transform: rotate(45deg) scale(-1);
+}
+
+#location-checkbox:checked~.header .location {
+	background-color      : #fff;
+	border-top-left-radius: 4rem;
+	z-index               : 1;
+}
+
+#location-checkbox:checked~.main-content-layer .special-offers__arrow {
+	z-index: 0;
+}
+
+.form-search {
+	background     : #FFF8FE;
+	border         : 3rem solid #F9EFF7;
+	box-sizing     : border-box;
+	border-radius  : 3rem;
+	display        : flex;
+	justify-content: space-between;
+	height         : 40rem;
+	padding        : 0 15rem;
+}
+
+.form-search_margin {
+	margin: 0 18rem 13rem;
+}
+
+.form-search>input,
+.form-search>button {
+	color     : #A0148E;
+	background: #FFF8FE;
+	border    : transparent;
+	padding   : 0;
+
+}
+
+.form-search>input::placeholder {
+	color         : #A0148E;
+	font          : 13rem/20rem "Titillium Web", sans-serif;
+	letter-spacing: 0.5rem;
+	opacity       : 0.4;
+}
+
+/* ! header end */
+
+/* ! main start */
+
+.special-offers {
+	border-radius: 3px;
+	color        : white;
+	font         : 18rem/23rem "Archive", sans-serif;
+	height       : 180rem;
+	margin       : 0 auto 26rem;
+	overflow     : hidden;
+	position     : relative;
+	width        : 87.8vw;
+}
+
+.special-offers__arrow {
+	align-items     : center;
+	background-color: #fff;
+	display         : flex;
+	height          : 28rem;
+	justify-content : center;
+	position        : absolute;
+	top             : 76rem;
+	width           : 28rem;
+	z-index         : 1;
+}
+
+.special-offers__arrow>span {
+	border-top : 2.5px solid #A0148E;
+	border-left: 2.5px solid #A0148E;
+	height     : 10rem;
+	position   : absolute;
+	width      : 10rem;
+}
+
+.special-offers__arrow_prev {
+	border-top-right-radius   : 2rem;
+	border-bottom-right-radius: 2rem;
+	left                      : 0;
+}
+
+.special-offers__arrow_prev>span {
+	transform: rotate(-45deg);
+}
+
+.special-offers__arrow_next {
+	border-top-left-radius   : 2rem;
+	border-bottom-left-radius: 2rem;
+	right                    : 0;
+}
+
+.special-offers__arrow_next>span {
+	transform: rotate(135deg);
+}
+
+.nav-dots {
+	bottom         : 5rem;
+	display        : flex;
+	justify-content: center;
+	position       : absolute;
+	width          : 100%;
+	z-index        : 1;
+}
+
+.nav-dots__item {
+	background-color: #fff;
+	border-radius   : 50%;
+	height          : 5rem;
+	margin          : 5rem;
+	opacity         : 0.5;
+	width           : 5rem;
+}
+
+/* todo класс заполнения точки */
+
+.nav-dots__item_select {
+	opacity  : 1;
+	transform: scale(1.5);
+}
+
+
+.special-offers__item {
+	background-size    : cover;
+	background-position: center center;
+	border             : 0.0001px solid transparent;
+	height             : 100%;
+	letter-spacing     : 0rem;
+	text-align         : center;
+	width              : 100%;
+}
+
+.special-offers__item::before {
+	background    : linear-gradient(180deg, #160013 0%, rgba(22, 0, 19, 0) 88.95%);
+	content       : "";
+	display       : block;
+	height        : 100%;
+	opacity       : 0.8;
+	pointer-events: none;
+	position      : absolute;
+	top           : 0rem;
+	width         : 100%;
+	z-index       : -1;
+}
+
+.special-offers_title {
+	color    : #fff;
+	font-size: 13rem;
+	margin   : 28rem auto 1rem;
+}
+
+.special-offers__price {
+	font  : bold 18rem/29rem "Titillium Web", sans-serif;
+	margin: 9rem auto 1rem;
+	width : 93rem;
+}
+
+.special-offers__price_new {
+	background-color: #fff;
+	border-radius   : 2px;
+	color           : #A0148E;
+}
+
+.special-offers__price_old {
+	font-size      : 13rem;
+	line-height    : 20rem;
+	text-decoration: line-through;
+}
+
+.popular-categories_wrapper {
+	height  : 133rem;
+	margin  : 18rem 0 0 18rem;
+	overflow: hidden;
+	position: relative;
+}
+
+.popular-categories_wrapper::after {
+	background    : linear-gradient(90deg, rgba(0, 255, 255, 0) 0%, #FFFFFF 100%);
+	content       : "";
+	display       : block;
+	height        : 100%;
+	position      : absolute;
+	pointer-events: none;
+	top           : 0;
+	right         : -2%;
+	width         : 30%;
+}
+
+.popular-categories {
+	display : flex;
+	gap     : 10rem;
+	height  : 170rem;
+	overflow: scroll hidden;
+}
+
+.popular-categories__item {
+	flex         : 0 0 auto;
+	overflow-wrap: anywhere;
+	width        : 99rem
+}
+
+.popular-categories__img {
+	height: 80rem;
+	width : 100%;
+}
+
+.popular-categories__subtitle {
+	color     : #A0148E;
+	font      : bold 13rem/17rem "Titillium Web", sans-serif;
+	margin    : 7rem 0;
+	text-align: center;
+}
+
+/* !!!!!!!!!!!!!!!!!!!!!!!!!!!! */
+
+.popular-products {
+	font  : bold 13rem/17rem "Titillium Web", sans-serif;
+	margin: 19rem 20rem 0 20rem;
+}
+
+.popular-products__item {
+	border       : 3px solid #FFF8FE;
+	border-radius: 3px;
+	box-sizing   : border-box;
+	height       : 255rem;
+	padding      : 23rem 10rem 0;
+	position     : relative;
+	text-align   : center;
+	width        : 135rem;
+
+}
+
+.popular-products__photo {
+	height: auto;
+	width : 100%;
+}
+
+.popular-products__photo img {
+	height: auto;
+	width : 100%;
+}
+
+.popular-products__block-get {
+	background     : #FFF8FE;
+	bottom         : 0;
+	display        : flex;
+	height         : 42rem;
+	justify-content: space-between;
+	left           : 0;
+	position       : absolute;
+	right          : 0;
+}
+
+.popular-products__cost {
+	align-items    : center;
+	display        : flex;
+	flex-direction : column;
+	flex-grow      : 1;
+	justify-content: center;
+}
+
+.popular-products__price {
+	color: #2D0027;
+	font : bold 15rem/23rem "Titillium Web", sans-serif;
+}
+
+.popular-products__price_new {
+	color: #A0148E;
+}
+
+.popular-products__price_old {
+	font-size      : 11rem;
+	line-height    : 17rem;
+	opacity        : 0.3;
+	text-decoration: line-through;
+}
+
+.popular-products__button-cart {
+	background: url(../img/icon/basket-icon.svg) center center no-repeat;
+	height    : 100%;
+	width     : 41rem;
+}
+
+/* !!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
+
+.popular-brand {
+	display              : grid;
+	gap                  : 5VW;
+	grid-template-columns: repeat(3, 1fr);
+	margin               : 0 20rem 37rem;
+}
+
+.popular-brand__category-name {
+	display: none;
+}
+
+.popular-brand__item {
+	align-items    : center;
+	display        : flex;
+	justify-content: center;
+	margin         : 0;
+}
+
+.popular-brand__item:nth-child(19)~.popular-brand__item {
+	display: none;
+}
+
+.popular-brand__item>img {
+	width     : 100%;
+	height    : 100%;
+	object-fit: contain;
+}
+
+/* !main end */
+
+/* ! footer */
+
+.footer {
+	background: #FFF8FE;
+	color     : rgba(45, 0, 39, 0.5);
+	font      : 12rem/26rem "Titillium Web", sans-serif;
+	padding   : 25rem 20rem 13rem;
+}
+
+.footer-menu {
+	border       : 1rem solid #EFE4ED;
+	border-radius: 3rem;
+}
+
+.footer-menu__item,
+.footer-menu__item_sublist {
+	color: rgba(45, 0, 39, 0.5);
+	font : 12rem/26rem "Titillium Web", sans-serif;
+}
+
+.footer-menu__item {
+	border-bottom: 1px solid #EFE4ED;
+	box-sizing   : border-box;
+	font-size    : 13rem;
+	font-weight  : bold;
+	line-height  : 23rem;
+	position     : relative;
+	padding      : 12rem 19rem 12rem;
+}
+
+.footer-menu__item:last-child {
+	border-bottom: none;
+}
+
+.footer-menu__submenu {
+	display: none;
+}
+
+.footer-menu__tick {
+	align-items    : center;
+	display        : flex;
+	height         : 20rem;
+	justify-content: center;
+	position       : absolute;
+	top            : 13rem;
+	transition     : 0.5s;
+	right          : 12rem;
+	width          : 20rem;
+}
+
+.footer-menu__tick>span {
+	border-right : 1.5px solid #967C92;
+	border-bottom: 1.5px solid #967C92;
+	display      : block;
+	height       : 5rem;
+	transform    : rotate(45deg);
+	width        : 5rem;
+}
+
+#footer-menu-checkbox-buyer:checked~.main-content-layer .footer-menu__submenu_buyer,
+#footer-menu-checkbox-partners:checked~.main-content-layer .footer-menu__submenu_partners,
+#footer-menu-checkbox-company:checked~.main-content-layer .footer-menu__submenu_company {
+	display: block;
+}
+
+#footer-menu-checkbox-buyer:checked~.main-content-layer label[for=footer-menu-checkbox-buyer],
+#footer-menu-checkbox-partners:checked~.main-content-layer label[for=footer-menu-checkbox-partners],
+#footer-menu-checkbox-company:checked~.main-content-layer label[for=footer-menu-checkbox-company] {
+	transform: scale(-1);
+}
+
+.apps {
+	margin-top  : 19rem;
+	text-align  : center;
+	word-spacing: 0.6em;
+}
+
+.apps__item {
+	background-origin: border-box;
+	display          : inline-block;
+}
+
+.apps__item img {
+	height: 32rem;
+	width : 100rem;
+}
+
+.apps__title {
+	display: none;
+}
+
+.footer__socialnet {
+	margin: 20rem auto 5rem;
+}
+
+.copyright {
+	font-size     : 11rem;
+	letter-spacing: 0.02em;
+	line-height   : 33rem;
+	text-align    : center;
+	opacity       : 0.3;
+}
