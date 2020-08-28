@@ -77,5 +77,5 @@ function makeCarausel(itemClassName, dotClassName, arrowNextClassName, arrowPrev
 	}
 }
 
-makeCarausel(".special-offers__item", ".nav-dots__item", ".special-offers__arrow_next", ".special-offers__arrow_prev", "nav-dots__item_select")
+makeCarausel(".special-offers__item", ".nav-dots__item", ".nav-arrow_next", ".nav-arrow_prev", "nav-dots__item_select")
 
