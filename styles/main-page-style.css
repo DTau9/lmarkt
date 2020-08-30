@@ -84,12 +84,12 @@ input[type=checkbox] {
 	height    : inherit;
 	left      : 0;
 	position  : absolute;
-	width     : 20rem;
+	width     : 21rem;
 	z-index   : 1;
 }
 
 .navbar__item_nav-menu::after {
-	left: 46rem;
+	left: 45rem;
 }
 
 .navbar__caption {
@@ -115,7 +115,7 @@ input[type=checkbox] {
 	padding         : 4rem 0 28rem;
 	position        : absolute;
 	width           : 100vw;
-	z-index         : 10;
+	z-index         : 1;
 }
 
 .nav-menu__item {
@@ -240,6 +240,13 @@ input[type=checkbox] {
 	display: block;
 }
 
+/* скрываем кнопки навигации */
+
+#nav-menu-checkbox:checked~.main-content-layer .nav-arrow,
+#nav-menu-checkbox:checked~.main-content-layer .nav-dots {
+	z-index: 0;
+}
+
 /* кнопки каталога */
 
 /* кнопки отрытия списков */
@@ -362,12 +369,11 @@ input[type=checkbox] {
 	background-color: white;
 	border-radius   : 4rem;
 	font-weight     : bold;
-	left            : -155rem;
+	left            : -154rem;
 	padding         : 9rem 0 7rem;
 	position        : absolute;
 	top             : 47rem;
 	width           : 280rem;
-	z-index         : 10;
 }
 
 .profile__item:first-of-type a {
@@ -384,15 +390,20 @@ input[type=checkbox] {
 	display: block;
 }
 
-#profile-checkbox:checked~.main-content-layer::after {
-	display: block;
-}
-
 #profile-checkbox:checked~.header .profile {
 	background-color: white;
 	margin          : 0 -10rem;
 	padding         : 0 10rem;
 	z-index         : 1;
+}
+
+#profile-checkbox:checked~.main-content-layer::after {
+	display: block;
+}
+
+#profile-checkbox:checked~.main-content-layer .nav-arrow,
+#profile-checkbox:checked~.main-content-layer .nav-dots {
+	z-index: 0;
 }
 
 .navbar_bottom {
@@ -443,11 +454,11 @@ input[type=checkbox] {
 	background-color         : #fff;
 	border-top-left-radius   : 4rem;
 	border-bottom-left-radius: 4rem;
-	left                     : 20rem;
+	left                     : 18rem;
 	padding                  : 22rem 20rem 7rem 0;
 	position                 : absolute;
 	text-align               : left;
-	top                      : 42rem;
+	top                      : 40rem;
 	right                    : 0;
 	z-index                  : 1;
 }
@@ -476,7 +487,7 @@ input[type=checkbox] {
 
 ::-webkit-scrollbar-track {
 	background-color: #FFF8FE;
-	margin-bottom   : -77rem;
+	margin-bottom   : -47rem;
 }
 
 ::-webkit-scrollbar-thumb {
@@ -516,7 +527,8 @@ input[type=checkbox] {
 	z-index               : 1;
 }
 
-#location-checkbox:checked~.main-content-layer .special-offers__arrow {
+#location-checkbox:checked~.main-content-layer .nav-arrow,
+#location-checkbox:checked~.main-content-layer .nav-dots {
 	z-index: 0;
 }
 
@@ -549,9 +561,9 @@ input[type=checkbox] {
 }
 
 .form-search>input:focus {
-	background-color: #fff;
-	outline         : 10000rem solid rgba(63, 7, 56, 0.2);
-	z-index         : 10;
+	background-color   : #fff;
+	outline            : 10000rem solid rgba(63, 7, 56, 0.2);
+	/* z-index         : 10; */
 }
 
 .form-search>input:active {
@@ -571,27 +583,18 @@ input[type=checkbox] {
 }
 
 .form-search>button {
-	background-color: transparent;
-	position        : absolute;
-	top             : 8rem;
-	right           : 16rem;
-	z-index         : 11;
+	background-color   : transparent;
+	position           : absolute;
+	top                : 8rem;
+	right              : 16rem;
+	/* z-index         : 11; */
 }
 
 /* ! header end */
 
 /* ! main start */
 
-.special-offers {
-	border-radius: 3px;
-	color        : white;
-	font         : 18rem/19rem "Archive", sans-serif;
-	height       : 180rem;
-	margin       : 0 auto 26rem;
-	overflow     : hidden;
-	position     : relative;
-	width        : 87.8vw;
-}
+/* todo навигационные элементы начало */
 
 .nav-arrow {
 	align-items     : center;
@@ -602,10 +605,6 @@ input[type=checkbox] {
 	position        : absolute;
 	width           : 28rem;
 	z-index         : 1;
-}
-
-.special-offers__arrow {
-	top: 76rem;
 }
 
 .nav-arrow>span {
@@ -644,10 +643,6 @@ input[type=checkbox] {
 	z-index        : 1;
 }
 
-.special-offers__nav-dots {
-	bottom: 5rem;
-}
-
 .nav-dots__item {
 	border-radius: 50%;
 	height       : 5rem;
@@ -656,9 +651,7 @@ input[type=checkbox] {
 	width        : 5rem;
 }
 
-.nav-dots__item_color-special-offers {
-	background-color: #fff;
-}
+/* todo навигационные элементы конец */
 
 /* todo класс заполнения точки */
 
@@ -667,28 +660,52 @@ input[type=checkbox] {
 	transform: scale(1.5);
 }
 
+.special-offers {
+	border-radius: 3px;
+	font         : 18rem/19rem "Archive", sans-serif;
+	height       : 180rem;
+	margin       : 0 auto 26rem;
+	overflow     : hidden;
+	position     : relative;
+	text-align   : center;
+	width        : 87.8vw;
+}
 
 .special-offers__item {
-	background-size    : cover;
-	background-position: center center;
-	border             : 0.0001px solid transparent;
-	height             : 100%;
-	letter-spacing     : 0rem;
-	text-align         : center;
-	width              : 100%;
+	display       : block;
+	height        : 100%;
+	letter-spacing: 0rem;
+	position      : relative;
+	width         : 100%;
 }
 
 .special-offers__item::before {
-	background    : linear-gradient(180deg, #160013 0%, rgba(22, 0, 19, 0) 88.95%);
-	content       : "";
-	display       : block;
-	height        : 100%;
-	opacity       : 0.8;
-	pointer-events: none;
+	background-image: linear-gradient(180deg, #160013 0%, rgba(22, 0, 19, 0) 88.95%);
+	content         : "";
+	display         : block;
+	height          : 100%;
+	opacity         : 0.8;
+	pointer-events  : none;
+	position        : absolute;
+	top             : 0rem;
+	width           : 100%;
+}
+
+.special-offers__photo {
+	width          : 100%;
+	height         : 100%;
+	object-fit     : cover;
+	object-position: right;
+}
+
+.special-offers__about {
+	color         : #fff;
+	top           : 0;
+	bottom        : 0;
+	left          : 0;
+	right         : 0;
 	position      : absolute;
-	top           : 0rem;
-	width         : 100%;
-	z-index       : -1;
+	pointer-events: none;
 }
 
 .special-offers_title {
@@ -713,6 +730,19 @@ input[type=checkbox] {
 	font-size      : 13rem;
 	line-height    : 20rem;
 	text-decoration: line-through;
+}
+
+.special-offers__arrow_prev,
+.special-offers__arrow_next {
+	top: 76rem;
+}
+
+.special-offers__nav-dots {
+	bottom: 5rem;
+}
+
+.nav-dots__item_color-special-offers {
+	background-color: #fff;
 }
 
 .popular-categories_wrapper {
@@ -772,10 +802,9 @@ input[type=checkbox] {
 }
 
 .popular-products {
-	display              : grid;
-	font                 : bold 13rem/17rem "Titillium Web", sans-serif;
-	gap                  : 40rem 10rem;
-	grid-template-columns: repeat(auto-fit, minmax(135rem, 1fr));
+	display: flex;
+	font   : bold 13rem/17rem "Titillium Web", sans-serif;
+	gap    : 4vw;
 }
 
 .popular-products__arrow_next,
@@ -804,6 +833,7 @@ input[type=checkbox] {
 	justify-content: flex-end;
 	position       : relative;
 	text-align     : center;
+	width          : 42.3vw;
 }
 
 .popular-products__like {
@@ -891,13 +921,11 @@ input[type=checkbox] {
 	width     : 52rem;
 }
 
-/* !!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
-
 .types-instrument_wrapper {
-	height    : 133rem;
-	margin-top: 18rem;
-	overflow  : hidden;
-	position  : relative;
+	height  : 60rem;
+	margin  : 18rem 0 32rem;
+	overflow: hidden;
+	position: relative;
 }
 
 .types-instrument_wrapper::after {
@@ -958,11 +986,91 @@ input[type=checkbox] {
 
 /* !!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
 
+.premium-offers {
+	border-radius: 3px;
+	font         : 18rem/19rem "Archive", sans-serif;
+	height       : 180rem;
+	margin       : 0 auto 29rem;
+	overflow     : hidden;
+	position     : relative;
+	text-align   : center;
+	width        : 87.8vw;
+}
+
+.premium-offers__item {
+	display       : block;
+	height        : 100%;
+	letter-spacing: 0rem;
+	position      : relative;
+	width         : 100%;
+}
+
+.premium-offers__item::before {
+	background-image: linear-gradient(180deg, #160013 0%, rgba(22, 0, 19, 0) 88.95%);
+	content         : "";
+	display         : block;
+	height          : 100%;
+	opacity         : 0.8;
+	pointer-events  : none;
+	position        : absolute;
+	top             : 0rem;
+	width           : 100%;
+}
+
+.premium-offers__photo {
+	width          : 100%;
+	height         : 100%;
+	object-fit     : cover;
+	object-position: center;
+}
+
+.premium-offers__about {
+	color         : #fff;
+	top           : 0;
+	bottom        : 0;
+	left          : 0;
+	right         : 0;
+	position      : absolute;
+	pointer-events: none;
+}
+
+.premium-offers__title {
+	color    : #fff;
+	font-size: 13rem;
+	margin   : 35rem auto 3rem;
+}
+
+.premium-offers__price {
+	background-color: #fff;
+	border-radius   : 2px;
+	color           : #A0148E;
+	font            : bold 18rem/29rem "Titillium Web", sans-serif;
+	margin          : 8rem auto 0;
+	width           : 93rem;
+}
+
+.premium-offers__arrow_prev,
+.premium-offers__arrow_next {
+	top: 77rem;
+}
+
+
+.premium-offers__nav-dots {
+	bottom: 5rem;
+}
+
+.nav-dots__item_color-premium-offers {
+	background-color: #fff;
+}
+
+
+/* !!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
+
 .popular-brand {
 	display              : grid;
 	gap                  : 5VW;
 	grid-template-columns: repeat(3, 1fr);
-	margin               : 0 20rem 37rem;
+	margin               : 19rem 20rem 37rem;
 }
 
 .popular-brand__category-name {
@@ -983,7 +1091,7 @@ input[type=checkbox] {
 .popular-brand__item>img {
 	width     : 100%;
 	height    : 100%;
-	object-fit: contain;
+	object-fit: scale-down;
 }
 
 /* !main end */

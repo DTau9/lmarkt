@@ -77,5 +77,9 @@ function makeCarausel(itemClassName, dotClassName, arrowNextClassName, arrowPrev
 	}
 }
 
-makeCarausel(".special-offers__item", ".nav-dots__item", ".nav-arrow_next", ".nav-arrow_prev", "nav-dots__item_select")
+// function makeCarausel(itemClassName, dotClassName, arrowNextClassName, arrowPrevClassName, toggleClassName)
+
+makeCarausel(".special-offers__item", ".special-offers__nav-dots-item", ".special-offers__arrow_next", ".special-offers__arrow_prev", "nav-dots__item_select");
+
+makeCarausel(".premium-offers__item", ".premium-offers__nav-dots-item", ".premium-offers__arrow_next", ".premium-offers__arrow_prev", "nav-dots__item_select");
 
