@@ -1,4 +1,12 @@
-function makeCarausel(itemClassName, dotClassName, arrowNextClassName, arrowPrevClassName, toggleClassName) {
+function makeCarausel(config) {
+
+	const itemClassName = config.itemSelector;
+	const dotClassName = config.navDotsSelector;
+	const arrowNextClassName = config.arrowNextSelector;
+	const arrowPrevClassName = config.arrowPrevSelector;
+	const toggleClassName = config.navDotActiveClass;
+	const disableWidth = config.disableWidth;
+	console.log(disableWidth)
 
 	let items = document.querySelectorAll(itemClassName)
 	let prev = document.querySelector(arrowPrevClassName)
@@ -61,7 +69,7 @@ function makeCarausel(itemClassName, dotClassName, arrowNextClassName, arrowPrev
 	prev.addEventListener("click", function () {
 		unsetCurrent();
 		if (current === 0) {
-			current = items.length - 1
+			current = items.length - 1;
 		} else {
 			current--;
 		}
@@ -75,11 +83,42 @@ function makeCarausel(itemClassName, dotClassName, arrowNextClassName, arrowPrev
 			setCurrent();
 		})
 	}
+
+	function checkDisableWidth() {
+		if (disableWidth !== undefined) {
+			if (screen.width > disableWidth) {
+				for (let i = 0; i < items.length; i++) {
+					items[i].style.display = "block";
+				}
+			}
+		}
+	}
+
+	checkDisableWidth();
+
+	window.addEventListener("resize", function () {
+		checkDisableWidth();
+	})
+
+
 }
 
 // function makeCarausel(itemClassName, dotClassName, arrowNextClassName, arrowPrevClassName, toggleClassName)
 
-makeCarausel(".special-offers__item", ".special-offers__nav-dots-item", ".special-offers__arrow_next", ".special-offers__arrow_prev", "nav-dots__item_select");
+makeCarausel({
+	itemSelector: ".special-offers__item",
+	navDotsSelector: ".special-offers__nav-dots-item",
+	arrowNextSelector: ".special-offers__arrow_next",
+	arrowPrevSelector: ".special-offers__arrow_prev",
+	navDotActiveClass: "nav-dots__item_select"
+});
 
-makeCarausel(".premium-offers__item", ".premium-offers__nav-dots-item", ".premium-offers__arrow_next", ".premium-offers__arrow_prev", "nav-dots__item_select");
+makeCarausel({
+	itemSelector: ".premium-offers__item",
+	navDotsSelector: ".premium-offers__nav-dots-item",
+	arrowNextSelector: ".premium-offers__arrow_next",
+	arrowPrevSelector: ".premium-offers__arrow_prev",
+	navDotActiveClass: "nav-dots__item_select",
+	disableWidth: 1024
+});
 

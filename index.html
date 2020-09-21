@@ -6,6 +6,9 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>LMarkt</title>
 	<link rel="stylesheet" href="styles/main-page-style.css">
+	<!-- owlcarausel css styles  -->
+	<!-- <link rel="stylesheet" href="lib/OwlCarousel2/assets/owl.carousel.css">
+	<link rel="stylesheet" href="lib/OwlCarousel2/assets/owl.theme.default.css"> -->
 </head>
 
 <body>
@@ -23,299 +26,362 @@
 	<input type="checkbox" id="footer-menu-checkbox-company" name="tick-checkbox">
 
 	<header class="header">
-		<div class="navbar navbar_top">
-			<div class="navbar__item navbar__item_nav-menu">
-				<label class="nav-menu_checkbox" for="nav-menu-checkbox">
-					<img src="img/icon/catalogpurple-icon.svg">
-					<div class="navbar__caption">Меню</div>
-				</label>
-				<ul class="nav-menu">
-					<li class="nav-menu__item">
-
-						<ul class="catalog-list">
-							<li class="catalog-list__item"><a href="#">Каталог</a></li>
-							<li class="catalog-list__item">
-								<a href="#">Гитары</a>
-								<label class="catalog-list__tick" for="catalog-list-checkbox-guitar"></label>
-
-								<ul class="catalog-list__sublist catalog-list-checkbox-guitar">
-									<li class="catalog-list__item catalog-list__item_back catalog-list__item_catalog-back">
-										<label class="catalog-list__tick_back" for="catalog-list-checkbox-guitar"></label>
-										<a href="#">Вернуться в Каталог</a>
-									</li>
-									<li class="catalog-list__item catalog-list__item_select"><a href="#">Гитары</a></li>
-									<li class="catalog-list__item_sublist catalog-list__item_show-all"><a href="#">Показать
-											все</a></li>
-									<li class="catalog-list__item_sublist"><a href="#">Классические
-											гитары</a>
-										<label class="catalog-list__tick" for="catalog-list-checkbox-guitar-classic"></label>
-										<ul class="catalog-list__sublist catalog-list-checkbox-guitar-classic">
-											<li class="catalog-list__item catalog-list__item_back catalog-list__item_catalog-back">
-												<label class="catalog-list__tick_back" for="catalog-list-checkbox-guitar"></label>
-												<a href="#">Вернуться в Каталог</a>
-											</li>
-											<li class="catalog-list__item catalog-list__item_back catalog-list__item_catalog-back">
-												<label class="catalog-list__tick_back"
-													for="catalog-list-checkbox-guitar-classic"></label>
-												<a href="#">Вернуться в «Гитары»</a>
-											</li>
-											<li class="catalog-list__item catalog-list__item_select"><a href="#">Классические
-													гитары</a></li>
-											<li class="catalog-list__item_sublist catalog-list__item_show-all"><a href="#">Показать
-													все</a></li>
-											<li class="catalog-list__item_sublist"><a href="#">Медиаторы</a></li>
-											<li class="catalog-list__item_sublist"><a href="#">Тренажеры для пальцев</a></li>
-											<li class="catalog-list__item_sublist"><a href="#">Стулья</a></li>
-											<li class="catalog-list__item_sublist"><a href="#">Слайды и каподастры</a></li>
-											<li class="catalog-list__item_sublist"><a href="#">Стойки и держатели</a></li>
-											<li class="catalog-list__item_sublist"><a href="#">Ремни для гитар</a></li>
-											<li class="catalog-list__item_sublist"><a href="#">Чехлы и кейсы</a></li>
-											<li class="catalog-list__item_sublist"><a href="#">Звукосниматели</a></li>
-											<li class="catalog-list__item_sublist"><a href="#">Комплектующие</a></li>
-										</ul>
-									</li>
-									<li class="catalog-list__item_sublist"><a href="#">Акустические гитары</a></li>
-									<li class="catalog-list__item_sublist"><a href="#">Акустические бас-гитары</a>
-										<label class="catalog-list__tick"
-											for="catalog-list-checkbox-guitar-acoustic-bass"></label>
-										<ul class="catalog-list__sublist catalog-list-checkbox-guitar-acoustic-bass">
-											<li class="catalog-list__item catalog-list__item_back catalog-list__item_catalog-back">
-												<label class="catalog-list__tick_back" for="catalog-list-checkbox-guitar"></label>
-												<a href="#">Вернуться в Каталог</a>
-											</li>
-											<li class="catalog-list__item catalog-list__item_back catalog-list__item_catalog-back">
-												<label class="catalog-list__tick_back"
-													for="catalog-list-checkbox-guitar-acoustic-bass"></label>
-												<a href="#">Вернуться в «Гитары»</a>
-											</li>
-											<li class="catalog-list__item catalog-list__item_select"><a href="#">Акустические
-													бас-итары</a></li>
-											<li class="catalog-list__item_sublist catalog-list__item_show-all"><a href="#">Показать
-													все</a></li>
-											<li class="catalog-list__item_sublist"><a href="#">Медиаторы</a></li>
-											<li class="catalog-list__item_sublist"><a href="#">Тренажеры для пальцев</a></li>
-											<li class="catalog-list__item_sublist"><a href="#">Стулья</a></li>
-											<li class="catalog-list__item_sublist"><a href="#">Слайды и каподастры</a></li>
-											<li class="catalog-list__item_sublist"><a href="#">Стойки и держатели</a></li>
-											<li class="catalog-list__item_sublist"><a href="#">Ремни для гитар</a></li>
-											<li class="catalog-list__item_sublist"><a href="#">Чехлы и кейсы</a></li>
-											<li class="catalog-list__item_sublist"><a href="#">Звукосниматели</a></li>
-											<li class="catalog-list__item_sublist"><a href="#">Комплектующие</a></li>
-										</ul>
-									</li>
-									<li class="catalog-list__item_sublist"><a href="#">Электрогитары</a></li>
-									<li class="catalog-list__item_sublist"><a href="#">Бас-гитары</a></li>
-									<li class="catalog-list__item_sublist"><a href="#">Укулеле</a></li>
-									<li class="catalog-list__item_sublist"><a href="#">Народные инструменты</a></li>
-									<li class="catalog-list__item_sublist"><a href="#">Наборы и комплекты</a></li>
-									<li class="catalog-list__item_sublist"><a href="#">Гитарное усиление</a></li>
-									<li class="catalog-list__item_sublist"><a href="#">Процессоры и педали эффектов</a></li>
-									<li class="catalog-list__item_sublist"><a href="#">Тюнеры и метрономы</a></li>
-									<li class="catalog-list__item_sublist"><a href="#">Струны</a></li>
-									<li class="catalog-list__item_sublist"><a href="#">Гитарные аксессуары</a></li>
-								</ul>
-							</li>
-							<li class="catalog-list__item">
-								<a href="#">Клавишные инструменты</a>
-								<label class="catalog-list__tick" for=""></label>
-							</li>
-							<li class="catalog-list__item"><a href="#">Ударные инструменты</a></li>
-							<li class="catalog-list__item">
-								<a href="#">Микрофоны и радиосистемы</a>
-								<label class="catalog-list__tick" for="catalog-list-checkbox-microphone"></label>
-								<ul class="catalog-list__sublist catalog-list-checkbox-microphone">
-									<li class="catalog-list__item catalog-list__item_back catalog-list__item_catalog-back">
-										<label class="catalog-list__tick_back" for="catalog-list-checkbox-microphone"></label>
-										<a href="#">Вернуться в Каталог</a>
-									</li>
-									<li class="catalog-list__item catalog-list__item_select"><a href="#">Микрофоны и
-											радиосистемы</a></li>
-									<li class="catalog-list__item_sublist catalog-list__item_show-all"><a href="#">Показать
-											все</a></li>
-									<li class="catalog-list__item_sublist"><a href="#">Медиаторы</a></li>
-									<li class="catalog-list__item_sublist"><a href="#">Тренажеры для пальцев</a></li>
-									<li class="catalog-list__item_sublist"><a href="#">Стулья</a></li>
-									<li class="catalog-list__item_sublist"><a href="#">Слайды и каподастры</a></li>
-									<li class="catalog-list__item_sublist"><a href="#">Стойки и держатели</a></li>
-									<li class="catalog-list__item_sublist"><a href="#">Ремни для гитар</a></li>
-									<li class="catalog-list__item_sublist"><a href="#">Чехлы и кейсы</a></li>
-									<li class="catalog-list__item_sublist"><a href="#">Звукосниматели</a></li>
-									<li class="catalog-list__item_sublist"><a href="#">Комплектующие</a></li>
-								</ul>
-							</li>
-							<li class="catalog-list__item">
-								<a href="#">DJ оборудование</a>
-								<label class="catalog-list__tick" for=""></label>
-							</li>
-							<li class="catalog-list__item"><a href="#">Студийное оборудование</a></li>
-							<li class="catalog-list__item">
-								<a href="#">Звуковое оборудование</a>
-								<label class="catalog-list__tick" for=""></label>
-							</li>
-							<li class="catalog-list__item">
-								<a href="#">Световое оборудование</a>
-								<label class="catalog-list__tick" for=""></label>
-							</li>
-							<li class="catalog-list__item"><a href="#">Наушники и гарнитуры</a></li>
-							<li class="catalog-list__item"><a href="#">Коммутация</a></li>
-							<li class="catalog-list__item"><a href="#">Духовые инструменты</a></li>
-							<li class="catalog-list__item">
-								<a href="#">Губные гармошки и мелодики</a>
-								<label class="catalog-list__tick" for=""></label>
-							</li>
-							<li class="catalog-list__item">
-								<a href="#">Смычковые и щипковые</a>
-								<label class="catalog-list__tick" for=""></label>
-							</li>
-							<li class="catalog-list__item">
-								<a href="#">Аккордеоны и баяны</a>
-								<label class="catalog-list__tick" for="catalog-list-checkbox-accordion"></label>
-								<ul class="catalog-list__sublist catalog-list-checkbox-accordion">
-									<li class="catalog-list__item catalog-list__item_back catalog-list__item_catalog-back">
-										<label class="catalog-list__tick_back" for="catalog-list-checkbox-accordion"></label>
-										<a href="#">Вернуться в Каталог</a>
-									</li>
-									<li class="catalog-list__item catalog-list__item_select"><a href="#">Аккордеоны и баян</a>
-									</li>
-									<li class="catalog-list__item_sublist catalog-list__item_show-all"><a href="#">Показать
-											все</a></li>
-									<li class="catalog-list__item_sublist"><a href="#">Медиаторы</a></li>
-									<li class="catalog-list__item_sublist"><a href="#">Тренажеры для пальцев</a></li>
-									<li class="catalog-list__item_sublist"><a href="#">Стулья</a></li>
-									<li class="catalog-list__item_sublist"><a href="#">Слайды и каподастры</a></li>
-									<li class="catalog-list__item_sublist"><a href="#">Стойки и держатели</a></li>
-									<li class="catalog-list__item_sublist"><a href="#">Ремни для гитар</a></li>
-									<li class="catalog-list__item_sublist"><a href="#">Чехлы и кейсы</a></li>
-									<li class="catalog-list__item_sublist"><a href="#">Звукосниматели</a></li>
-									<li class="catalog-list__item_sublist"><a href="#">Комплектующие</a></li>
-								</ul>
-							</li>
-						</ul>
-
-					</li>
-					<li class="nav-menu__item nav-menu__item_open-sublist">
-						<ul class="icon-menu">
-							<li><a class="icon-menu__item" href="#"><img class="basket" src="img/icon/basket-icon.svg"
-										alt="Корзина">Корзина</a></li>
-							<li><a class="icon-menu__item" href="#"><img class="profile-icon" src="img/icon/profile-icon.svg"
-										alt="Профиль">Профиль</a></li>
-							<li><a class="icon-menu__item" href=" #"><img class="compare" src="img/icon/compare-icon.svg"
-										alt="Сравнение товаров">Сравнение товаров</a></li>
-							<li><a class="icon-menu__item" href=" #"><img class="favorite" src="img/icon/heart-icon.svg"
-										alt="Избранное">Избранное</a>
-							</li>
-						</ul>
-					</li>
-					<li class="nav-menu__item nav-menu__item_open-sublist">
-						<ul class="info-menu">
-							<li class="info-menu__item"><a href="#">О маркетплейсе</a></li>
-							<li class="info-menu__item"><a href="#">Где мой заказ?</a></li>
-							<li class="info-menu__item"><a href="#">Контакты</a></li>
-						</ul>
-					</li>
-					<a class="phone nav-menu__phone" href="tel: +7 800 611 00 97">8 800 611 00 97</a>
-					<ul class="socialnet nav-menu__socialnet">
-						<li class="socialnet__item"><a href="#"><img class="vk" src="img/social/vkontakte-icon.svg"
-									alt="Вконтакте"></a></li>
-						<li class="socialnet__item"><a href="#"><img class="fb" src="img/social/facebook-icon.svg"
-									alt="Фэйсбук"></a></li>
-						<li class="socialnet__item"><a href="#"><img class="instagram" src="img/social/instagram-icon.svg"
-									alt="Инстаграм"></a>
-						</li>
-						<li class="socialnet__item"><a href="#"><img class="telegram" src="img/social/telegram-icon.svg"
-									alt="Телеграм"></a>
-						</li>
-					</ul>
+		<div class="top-menu-bar">
+			<label class="location__tick location__tick_desktop-view" for="location-checkbox">
+				<div class="location__current-city">Москва<span></span></div>
+			</label>
+			<div class="social-info-bar">
+				<ul class="info-menu">
+					<li><a class="info-menu__item info-menu__item_pick-up" href="#">Пункты выдачи и постаматы</a></li>
+					<li><a class="info-menu__item" href="#">О маркетплейсе</a></li>
+					<li><a class="info-menu__item" href="#">Где мой заказ?</a></li>
+					<li><a class="info-menu__item" href="#">Контакты</a></li>
 				</ul>
-			</div>
-
-			<div class="navbar__item">
-				<a href="tel:+7 800 611 00 97">
-					<img class="feedback" src="img/icon/phone-icon.svg">
-					<div class="navbar__caption">Позвонить нам</div>
-				</a>
-			</div>
-
-			<div class="navbar__item profile">
-				<label class="profile__checkbox" for="profile-checkbox">
-					<img src="img/icon/profile-icon.svg">
-					<div class="navbar__caption">Профиль</div>
-				</label>
-				<ul class="profile__list">
-					<li class="profile__item"><a href="#">Партнёрка</a></li>
-					<li class="profile__item"><a href="#">Операторская</a></li>
-					<li class=" profile__item"><a href="#">Мои заказы</a></li>
-					<li class="profile__item"><a href="#">Мои данные</a></li>
-					<li class="profile__item"><a href="#">Партнёрская программа</a></li>
-					<li class="profile__item"><a href="#" style="opacity: 0.5;">Выход</a></li>
-				</ul>
-			</div>
-
-			<div class="navbar__item">
-				<a class="basket" href=""><img src="img/icon/basket-icon.svg" alt="Корзина"></a>
-				<div class="navbar__caption">Корзина</div>
-			</div>
-		</div>
-
-		<div class="navbar navbar_bottom">
-			<a class="logo" href="#"><img src="img/logo.svg"></a>
-			<div class="location">
-				<label class="location__tick" for="location-checkbox">
-					<div class="location__current-city">Москва</div><span></span>
-				</label>
-				<div class="location__select-city">
-					<form class="location__form-search_margin form-search">
-						<input type="search" name="search" placeholder="Введите название города">
-						<button type="submit"><img src="img/icon/lens-icon.svg"></button>
-					</form>
-					<ul class="city-list">
-						<li><a class="city-list__item" href="#">Москва</a></li>
-						<li><a class="city-list__item" href="#">Санкт-Петербург</a></li>
-						<li><a class="city-list__item" href="#">Астрахань</a></li>
-						<li><a class="city-list__item" href="#">Барнаул</a></li>
-						<li><a class="city-list__item" href="#">Владивосток</a></li>
-						<li><a class="city-list__item" href="#">Волгоград</a></li>
-						<li><a class="city-list__item" href="#">Воронеж</a></li>
-						<li><a class="city-list__item" href="#">Екатеринбург</a></li>
-						<li><a class="city-list__item" href="#">Ижевск</a></li>
-						<li><a class="city-list__item" href="#">Иркутск</a></li>
-						<li><a class="city-list__item" href="#">Казань</a></li>
-						<li><a class="city-list__item" href="#">Кемерово</a></li>
-						<li><a class="city-list__item" href="#">Киров</a></li>
-						<li><a class="city-list__item" href="#">Краснодар</a></li>
-						<li><a class="city-list__item" href="#">Красноярск</a></li>
-						<li><a class="city-list__item" href="#">Липецк</a></li>
-						<li><a class="city-list__item" href="#">Махачкала</a></li>
-						<li><a class="city-list__item" href="#">Набережные Челны</a></li>
-						<li><a class="city-list__item" href="#">Новгород</a></li>
-						<li><a class="city-list__item" href="#">Новокузнецк</a></li>
-						<li><a class="city-list__item" href="#">Новосибирск</a></li>
-						<li><a class="city-list__item" href="#">Омск</a></li>
-						<li><a class="city-list__item" href="#">Оренбург</a></li>
-						<li><a class="city-list__item" href="#">Пенза</a></li>
-						<li><a class="city-list__item" href="#">Пермь</a></li>
-						<li><a class="city-list__item" href="#">Ростов-на-Дону</a></li>
-						<li><a class="city-list__item" href="#">Рязань</a></li>
-						<li><a class="city-list__item" href="#">Самара</a></li>
-						<li><a class="city-list__item" href="#">Саратов</a></li>
-						<li><a class="city-list__item" href="#">Тольяти</a></li>
-						<li><a class="city-list__item" href="#">Тула</a></li>
-						<li><a class="city-list__item" href="#">Тверь</a></li>
-					</ul>
+				<div class="socialnet socialnet_topbar-decktop">
+					<a class="socialnet__item socialnet__item_vk" href="https://vk.com"></a>
+					<a class="socialnet__item socialnet__item_facebook" href="https://www.facebook.com"></a>
+					<a class="socialnet__item socialnet__item_instagram" href="https://www.instagram.com/"></a>
+					<a class="socialnet__item socialnet__item_telegram" href="https://web.telegram.org"></a>
 				</div>
 			</div>
 		</div>
-		<form class="form-search form-search_margin">
-			<input type="search" name="search" placeholder="Поиск по сайту">
-			<button type="submit"><img src="img/icon/lens-icon.svg"></button>
-		</form>
+
+		<div class="navbar-form-search-wrapper">
+			<div class="navbar navbar_top">
+				<div class="navbar__item navbar__item_nav-menu">
+					<label class="nav-menu__checkbox_mobile" for="nav-menu-checkbox">
+						<div class="navbar__caption">Меню</div>
+					</label>
+					<ul class="nav-menu">
+						<li class="nav-menu__item">
+
+							<ul class="catalog-list">
+								<li class="catalog-list__item"><a href="#">Каталог</a></li>
+								<li class="catalog-list__item catalog-list-checkbox-guitar-select">
+									<a href="#">Гитары</a>
+									<label class="catalog-list__tick" for="catalog-list-checkbox-guitar"></label>
+									<ul class="catalog-list__sublist catalog-list-checkbox-guitar">
+										<li class="catalog-list__item catalog-list__item_back catalog-list__item_catalog-back">
+											<label class="catalog-list__tick_back" for="catalog-list-checkbox-guitar"></label>
+											<a href="#">Вернуться в Каталог</a>
+										</li>
+										<li class="catalog-list__item catalog-list__item_select"><a href="#">Гитары</a></li>
+										<li class="catalog-list__item_sublist catalog-list__item_show-all"><a href="#">Показать
+												все</a></li>
+										<li class="catalog-list__item_sublist catalog-list-checkbox-guitar-classic-select"><a
+												href="#">Классические
+												гитары</a>
+											<label class="catalog-list__tick" for="catalog-list-checkbox-guitar-classic"></label>
+											<ul class="catalog-list__sublist catalog-list-checkbox-guitar-classic">
+												<li
+													class="catalog-list__item catalog-list__item_back catalog-list__item_catalog-back">
+													<label class="catalog-list__tick_back"
+														for="catalog-list-checkbox-guitar"></label>
+													<a href="#">Вернуться в Каталог</a>
+												</li>
+												<li
+													class="catalog-list__item catalog-list__item_back catalog-list__item_catalog-back">
+													<label class="catalog-list__tick_back"
+														for="catalog-list-checkbox-guitar-classic"></label>
+													<a href="#">Вернуться в «Гитары»</a>
+												</li>
+												<li class="catalog-list__item catalog-list__item_select"><a href="#">Классические
+														гитары</a></li>
+												<li class="catalog-list__item_sublist catalog-list__item_show-all"><a
+														href="#">Показать
+														все</a></li>
+												<li class="catalog-list__item_sublist"><a href="#">Медиаторы</a></li>
+												<li class="catalog-list__item_sublist"><a href="#">Тренажеры для пальцев</a></li>
+												<li class="catalog-list__item_sublist"><a href="#">Стулья</a></li>
+												<li class="catalog-list__item_sublist"><a href="#">Слайды и каподастры</a></li>
+												<li class="catalog-list__item_sublist"><a href="#">Стойки и держатели</a></li>
+												<li class="catalog-list__item_sublist"><a href="#">Ремни для гитар</a></li>
+												<li class="catalog-list__item_sublist"><a href="#">Чехлы и кейсы</a></li>
+												<li class="catalog-list__item_sublist"><a href="#">Звукосниматели</a></li>
+												<li class="catalog-list__item_sublist"><a href="#">Комплектующие</a></li>
+											</ul>
+										</li>
+										<li class="catalog-list__item_sublist"><a href="#">Акустические гитары</a></li>
+										<li class="catalog-list__item_sublist catalog-list-checkbox-guitar-acoustic-bass-select">
+											<a href="#">Акустические бас-гитары</a>
+											<label class="catalog-list__tick"
+												for="catalog-list-checkbox-guitar-acoustic-bass"></label>
+											<ul class="catalog-list__sublist catalog-list-checkbox-guitar-acoustic-bass">
+												<li
+													class="catalog-list__item catalog-list__item_back catalog-list__item_catalog-back">
+													<label class="catalog-list__tick_back"
+														for="catalog-list-checkbox-guitar"></label>
+													<a href="#">Вернуться в Каталог</a>
+												</li>
+												<li
+													class="catalog-list__item catalog-list__item_back catalog-list__item_catalog-back">
+													<label class="catalog-list__tick_back"
+														for="catalog-list-checkbox-guitar-acoustic-bass"></label>
+													<a href="#">Вернуться в «Гитары»</a>
+												</li>
+												<li class="catalog-list__item catalog-list__item_select"><a href="#">Акустические
+														бас-итары</a></li>
+												<li class="catalog-list__item_sublist catalog-list__item_show-all"><a
+														href="#">Показать
+														все</a></li>
+												<li class="catalog-list__item_sublist"><a href="#">Медиаторы</a></li>
+												<li class="catalog-list__item_sublist"><a href="#">Тренажеры для пальцев</a></li>
+												<li class="catalog-list__item_sublist"><a href="#">Стулья</a></li>
+												<li class="catalog-list__item_sublist"><a href="#">Слайды и каподастры</a></li>
+												<li class="catalog-list__item_sublist"><a href="#">Стойки и держатели</a></li>
+												<li class="catalog-list__item_sublist"><a href="#">Ремни для гитар</a></li>
+												<li class="catalog-list__item_sublist"><a href="#">Чехлы и кейсы</a></li>
+												<li class="catalog-list__item_sublist"><a href="#">Звукосниматели</a></li>
+												<li class="catalog-list__item_sublist"><a href="#">Комплектующие</a></li>
+											</ul>
+										</li>
+										<li class="catalog-list__item_sublist"><a href="#">Электрогитары</a></li>
+										<li class="catalog-list__item_sublist"><a href="#">Бас-гитары</a></li>
+										<li class="catalog-list__item_sublist"><a href="#">Укулеле</a></li>
+										<li class="catalog-list__item_sublist"><a href="#">Народные инструменты</a></li>
+										<li class="catalog-list__item_sublist"><a href="#">Наборы и комплекты</a></li>
+										<li class="catalog-list__item_sublist"><a href="#">Гитарное усиление</a></li>
+										<li class="catalog-list__item_sublist"><a href="#">Процессоры и педали эффектов</a></li>
+										<li class="catalog-list__item_sublist"><a href="#">Тюнеры и метрономы</a></li>
+										<li class="catalog-list__item_sublist"><a href="#">Струны</a></li>
+										<li class="catalog-list__item_sublist"><a href="#">Гитарные аксессуары</a></li>
+									</ul>
+								</li>
+								<li class="catalog-list__item">
+									<a href="#">Клавишные инструменты</a>
+									<label class="catalog-list__tick" for=""></label>
+								</li>
+								<li class="catalog-list__item"><a href="#">Ударные инструменты</a></li>
+								<li class="catalog-list__item catalog-list-checkbox-microphone-select">
+									<a href="#">Микрофоны и радиосистемы</a>
+									<label class="catalog-list__tick" for="catalog-list-checkbox-microphone"></label>
+									<ul class="catalog-list__sublist catalog-list-checkbox-microphone">
+										<li class="catalog-list__item catalog-list__item_back catalog-list__item_catalog-back">
+											<label class="catalog-list__tick_back" for="catalog-list-checkbox-microphone"></label>
+											<a href="#">Вернуться в Каталог</a>
+										</li>
+										<li class="catalog-list__item catalog-list__item_select"><a href="#">Микрофоны и
+												радиосистемы</a></li>
+										<li class="catalog-list__item_sublist catalog-list__item_show-all"><a href="#">Показать
+												все</a></li>
+										<li class="catalog-list__item_sublist"><a href="#">Медиаторы</a></li>
+										<li class="catalog-list__item_sublist"><a href="#">Тренажеры для пальцев</a></li>
+										<li class="catalog-list__item_sublist"><a href="#">Стулья</a></li>
+										<li class="catalog-list__item_sublist"><a href="#">Слайды и каподастры</a></li>
+										<li class="catalog-list__item_sublist"><a href="#">Стойки и держатели</a></li>
+										<li class="catalog-list__item_sublist"><a href="#">Ремни для гитар</a></li>
+										<li class="catalog-list__item_sublist"><a href="#">Чехлы и кейсы</a></li>
+										<li class="catalog-list__item_sublist"><a href="#">Звукосниматели</a></li>
+										<li class="catalog-list__item_sublist"><a href="#">Комплектующие</a></li>
+									</ul>
+								</li>
+								<li class="catalog-list__item">
+									<a href="#">DJ оборудование</a>
+									<label class="catalog-list__tick" for=""></label>
+								</li>
+								<li class="catalog-list__item"><a href="#">Студийное оборудование</a></li>
+								<li class="catalog-list__item">
+									<a href="#">Звуковое оборудование</a>
+									<label class="catalog-list__tick" for=""></label>
+								</li>
+								<li class="catalog-list__item">
+									<a href="#">Световое оборудование</a>
+									<label class="catalog-list__tick" for=""></label>
+								</li>
+								<li class="catalog-list__item"><a href="#">Наушники и гарнитуры</a></li>
+								<li class="catalog-list__item"><a href="#">Коммутация</a></li>
+								<li class="catalog-list__item"><a href="#">Духовые инструменты</a></li>
+								<li class="catalog-list__item">
+									<a href="#">Губные гармошки и мелодики</a>
+									<label class="catalog-list__tick" for=""></label>
+								</li>
+								<li class="catalog-list__item">
+									<a href="#">Смычковые и щипковые</a>
+									<label class="catalog-list__tick" for=""></label>
+								</li>
+								<li class="catalog-list__item catalog-list-checkbox-accordion-select">
+									<a href="#">Аккордеоны и баяны</a>
+									<label class="catalog-list__tick" for="catalog-list-checkbox-accordion"></label>
+									<ul class="catalog-list__sublist catalog-list-checkbox-accordion">
+										<li class="catalog-list__item catalog-list__item_back catalog-list__item_catalog-back">
+											<label class="catalog-list__tick_back" for="catalog-list-checkbox-accordion"></label>
+											<a href="#">Вернуться в Каталог</a>
+										</li>
+										<li class="catalog-list__item catalog-list__item_select"><a href="#">Аккордеоны и баян</a>
+										</li>
+										<li class="catalog-list__item_sublist catalog-list__item_show-all"><a href="#">Показать
+												все</a></li>
+										<li class="catalog-list__item_sublist"><a href="#">Медиаторы</a></li>
+										<li class="catalog-list__item_sublist"><a href="#">Тренажеры для пальцев</a></li>
+										<li class="catalog-list__item_sublist"><a href="#">Стулья</a></li>
+										<li class="catalog-list__item_sublist"><a href="#">Слайды и каподастры</a></li>
+										<li class="catalog-list__item_sublist"><a href="#">Стойки и держатели</a></li>
+										<li class="catalog-list__item_sublist"><a href="#">Ремни для гитар</a></li>
+										<li class="catalog-list__item_sublist"><a href="#">Чехлы и кейсы</a></li>
+										<li class="catalog-list__item_sublist"><a href="#">Звукосниматели</a></li>
+										<li class="catalog-list__item_sublist"><a href="#">Комплектующие</a></li>
+									</ul>
+								</li>
+							</ul>
+							<section class="nav-menu__sidebar sidebar">
+								<a class="sidebar__product" href="#">
+									<img class="sidebar__photo" src="img/12.png" alt="">
+									<div class="sidebar__about">
+										<h2 class="title sidebar_title">ЭЛЕКТРОГИТАРА</h2>
+										<div class="sidebar__model">Ibanez RG450<br>Japan 2001</div>
+										<div class="sidebar__price">
+											<div class="sidebar__price_new">49 990 ₽</div>
+										</div>
+									</div>
+								</a>
+								<div class="sidebar__brand">
+									<a class="sidebar__brand-label" href="#" class="sidebar"><img src="img/label/image 10.png"
+											alt=""></a>
+									<a class="sidebar__brand-label" href="#" class="sidebar"><img src="img/label/image 11.png"
+											alt=""></a>
+									<a class="sidebar__brand-label" href="#" class="sidebar"><img src="img/label/image 12.png"
+											alt=""></a>
+									<a class="sidebar__brand-label" href="#" class="sidebar"><img src="img/label/image 13.png"
+											alt=""></a>
+									<a class="sidebar__brand-label" href="#" class="sidebar"><img src="img/label/image 14.png"
+											alt=""></a>
+								</div>
+							</section>
+						</li>
+
+						<li class="nav-menu__item nav-menu__item_open-sublist">
+							<ul class="icon-menu">
+								<li><a class="icon-menu__item icon-menu__item_cart" href="#">Корзина</a></li>
+								<li><a class="icon-menu__item icon-menu__item_profile" href="#">Профиль</a></li>
+								<li><a class="icon-menu__item icon-menu__item_compare" href=" #">Сравнение товаров</a></li>
+								<li><a class="icon-menu__item icon-menu__item_favorite" href=" #">Избранное</a>
+								</li>
+							</ul>
+						</li>
+						<li class="nav-menu__item nav-menu__item_open-sublist">
+							<ul>
+								<li class="pick-up-point"><a href="#">Пункты выдачи и постаматы</a></li>
+								<li><a href="#">О маркетплейсе</a></li>
+								<li><a href="#">Где мой заказ?</a></li>
+								<li><a href="#">Контакты</a></li>
+							</ul>
+						</li>
+						<a class="phone nav-menu__phone" href="tel: +7 800 611 00 97">8 800 611 00 97</a>
+						<div class="socialnet  nav-menu__socialnet">
+							<a class="socialnet__item socialnet__item_vk" href="https://vk.com"></a>
+							<a class="socialnet__item socialnet__item_facebook" href="https://www.facebook.com"></a>
+							<a class="socialnet__item socialnet__item_instagram" href="https://www.instagram.com/"></a>
+							<a class="socialnet__item socialnet__item_telegram" href="https://web.telegram.org"></a>
+							</a>
+						</div>
+					</ul>
+				</div>
+
+				<div class="navbar__item navbar__item_feedback">
+					<a href="tel:+7 800 611 00 97">
+						<div class="navbar__caption">Позвонить нам</div>
+					</a>
+					<a class="phone phone_navbar" href="tel: +7 800 611 00 97" class="phone">8 800 611 00 97</a>
+				</div>
+
+				<div class="navbar__item navbar__item_favourites">
+					<a href="#">
+						<div class="navbar__caption">Избранное</div>
+					</a>
+				</div>
+
+				<div class="navbar__item navbar__item_compare">
+					<a href="#">
+						<div class="navbar__caption">Сравнение</div>
+					</a>
+				</div>
+
+				<div class="navbar__item profile">
+					<label class="profile__checkbox" for="profile-checkbox">
+						<div class="navbar__caption">Профиль</div>
+					</label>
+					<ul class="profile__list">
+						<li class="profile__item"><a href="#">Партнёрка</a></li>
+						<li class="profile__item"><a href="#">Операторская</a></li>
+						<li class=" profile__item"><a href="#">Мои заказы</a></li>
+						<li class="profile__item"><a href="#">Мои данные</a></li>
+						<li class="profile__item"><a href="#">Партнёрская программа</a></li>
+						<li class="profile__item"><a href="#" style="opacity: 0.5;">Выход</a></li>
+					</ul>
+				</div>
+
+				<div class="navbar__item navbar__item_cart">
+					<a class="basket" href=""></a>
+					<div class="navbar__caption">Корзина</div>
+				</div>
+			</div>
+
+			<div class="navbar navbar_bottom">
+				<a class="logo" href="#"><img src="img/logo.svg"></a>
+				<div class="location">
+					<label class="location__tick location__tick_momobile-view" for="location-checkbox">
+						<div class="location__current-city">Москва<span></span></div>
+					</label>
+					<div class="location__select-city">
+						<div class="location__pick-up-in-city">
+							Москва<a href="#"> смотреть пункты выдачи и постаматы</a>
+						</div>
+						<form class="location__form-search_margin form-search">
+							<input type="search" name="search" placeholder="Введите название города">
+							<button type="submit"></button>
+						</form>
+						<ul class="city-list">
+							<li><a class="city-list__item" href="#">Москва</a></li>
+							<li><a class="city-list__item" href="#">Санкт-Петербург</a></li>
+							<li><a class="city-list__item" href="#">Астрахань</a></li>
+							<li><a class="city-list__item" href="#">Барнаул</a></li>
+							<li><a class="city-list__item" href="#">Владивосток</a></li>
+							<li><a class="city-list__item" href="#">Волгоград</a></li>
+							<li><a class="city-list__item" href="#">Воронеж</a></li>
+							<li><a class="city-list__item" href="#">Екатеринбург</a></li>
+							<li><a class="city-list__item" href="#">Ижевск</a></li>
+							<li><a class="city-list__item" href="#">Иркутск</a></li>
+							<li><a class="city-list__item" href="#">Казань</a></li>
+							<li><a class="city-list__item" href="#">Кемерово</a></li>
+							<li><a class="city-list__item" href="#">Киров</a></li>
+							<li><a class="city-list__item" href="#">Краснодар</a></li>
+							<li><a class="city-list__item" href="#">Красноярск</a></li>
+							<li><a class="city-list__item" href="#">Липецк</a></li>
+							<li><a class="city-list__item" href="#">Махачкала</a></li>
+							<li><a class="city-list__item" href="#">Набережные Челны</a></li>
+							<li><a class="city-list__item" href="#">Новгород</a></li>
+							<li><a class="city-list__item" href="#">Новокузнецк</a></li>
+							<li><a class="city-list__item" href="#">Новосибирск</a></li>
+							<li><a class="city-list__item" href="#">Омск</a></li>
+							<li><a class="city-list__item" href="#">Оренбург</a></li>
+							<li><a class="city-list__item" href="#">Пенза</a></li>
+							<li><a class="city-list__item" href="#">Пермь</a></li>
+							<li><a class="city-list__item" href="#">Ростов-на-Дону</a></li>
+							<li><a class="city-list__item" href="#">Рязань</a></li>
+							<li><a class="city-list__item" href="#">Самара</a></li>
+							<li><a class="city-list__item" href="#">Саратов</a></li>
+							<li><a class="city-list__item" href="#">Тольяти</a></li>
+							<li><a class="city-list__item" href="#">Тула</a></li>
+							<li><a class="city-list__item" href="#">Тверь</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<label class="nav-menu__checkbox_desktop" for="nav-menu-checkbox">
+				<div class="navbar__catalog-caption">Каталог</div>
+			</label>
+			<form class="form-search form-search_margin">
+				<input type="search" name="search" placeholder="Поиск по сайту">
+				<button type="submit"></button>
+			</form>
+		</div>
 	</header>
 
 	<div class="main-content-layer">
 		<main class="main">
 			<div class="special-offers">
-				<div class="special-offers__arrow_prev nav-arrow nav-arrow_prev"><span></span></div>
-				<div class="special-offers__arrow_next nav-arrow nav-arrow_next"><span></span></div>
+				<button class="special-offers__arrow_prev nav-arrow nav-arrow_prev"><span></span></button>
+				<button class="special-offers__arrow_next nav-arrow nav-arrow_next"><span></span></button>
 				<div class="special-offers__nav-dots nav-dots">
 					<span class="special-offers__nav-dots-item nav-dots__item nav-dots__item_color-special-offers"></span>
 					<span class="special-offers__nav-dots-item nav-dots__item nav-dots__item_color-special-offers"></span>
@@ -373,37 +439,87 @@
 
 			<h2 class="title">ПОПУЛЯРНЫЕ КАТЕГОРИИ</h2>
 			<div class="popular-categories_wrapper">
-				<div class="popular-categories">
+				<button class="popular-categories__arrow_prev nav-arrow nav-arrow_prev"><span></span></button>
+				<button class="popular-categories__arrow_next nav-arrow nav-arrow_next"><span></span></button>
+				<div class="popular-categories__nav-dots nav-dots">
+					<span
+						class="popular-categories__nav-dots-item nav-dots__item nav-dots__item_color-popular-categories"></span>
+					<span
+						class="popular-categories__nav-dots-item nav-dots__item nav-dots__item_color-popular-categories"></span>
+					<span
+						class="popular-categories__nav-dots-item nav-dots__item nav-dots__item_color-popular-categories"></span>
+				</div>
+				<div class="popular-categories owl-carousel">
+
 					<a class="popular-categories__item" href="#">
-						<img class="popular-categories__img" src="img/2.png" alt="">
+						<div class="popular-categories__img popular-categories__img_guitar-classic">
+						</div>
 						<h3 class="popular-categories__subtitle">Классические гитары</h3>
 					</a>
+
 					<a class="popular-categories__item" href="#">
-						<img class="popular-categories__img" src="img/3.png" alt="">
+						<div class="popular-categories__img popular-categories__img_synthesizers">
+						</div>
 						<h3 class="popular-categories__subtitle">Синтезаторы</h3>
 					</a>
+
 					<a class="popular-categories__item" href="#">
-						<img class="popular-categories__img" src="img/4.png" alt="">
+						<div class="popular-categories__img popular-categories__img_guitar-electro">
+						</div>
 						<h3 class="popular-categories__subtitle">Электрогитары</h3>
 					</a>
+
 					<a class="popular-categories__item" href="#">
-						<img class="popular-categories__img" src="img/5.png" alt="">
+						<div class="popular-categories__img popular-categories__img_amplifier">
+						</div>
 						<h3 class="popular-categories__subtitle">Усилители</h3>
 					</a>
+
 					<a class="popular-categories__item" href="#">
-						<img class="popular-categories__img" src="img/2.png" alt="">
+						<div class="popular-categories__img popular-categories__img_guitar-classic">
+						</div>
 						<h3 class="popular-categories__subtitle">Классические гитары</h3>
 					</a>
+
 					<a class="popular-categories__item" href="#">
-						<img class="popular-categories__img" src="img/3.png" alt="">
+						<div class="popular-categories__img popular-categories__img_synthesizers">
+						</div>
 						<h3 class="popular-categories__subtitle">Синтезаторы</h3>
 					</a>
+
 					<a class="popular-categories__item" href="#">
-						<img class="popular-categories__img" src="img/4.png" alt="">
+						<div class="popular-categories__img popular-categories__img_guitar-electro">
+						</div>
 						<h3 class="popular-categories__subtitle">Электрогитары</h3>
 					</a>
+
 					<a class="popular-categories__item" href="#">
-						<img class="popular-categories__img" src="img/5.png" alt="">
+						<div class="popular-categories__img popular-categories__img_amplifier">
+						</div>
+						<h3 class="popular-categories__subtitle">Усилители</h3>
+					</a>
+
+					<a class="popular-categories__item" href="#">
+						<div class="popular-categories__img popular-categories__img_guitar-classic">
+						</div>
+						<h3 class="popular-categories__subtitle">Классические гитары</h3>
+					</a>
+
+					<a class="popular-categories__item" href="#">
+						<div class="popular-categories__img popular-categories__img_synthesizers">
+						</div>
+						<h3 class="popular-categories__subtitle">Синтезаторы</h3>
+					</a>
+
+					<a class="popular-categories__item" href="#">
+						<div class="popular-categories__img popular-categories__img_guitar-electro">
+						</div>
+						<h3 class="popular-categories__subtitle">Электрогитары</h3>
+					</a>
+
+					<a class="popular-categories__item" href="#">
+						<div class="popular-categories__img popular-categories__img_amplifier">
+						</div>
 						<h3 class="popular-categories__subtitle">Усилители</h3>
 					</a>
 
@@ -412,8 +528,8 @@
 
 			<h2 class="title">ПОПУЛЯРНЫЕ ТОВАРЫ</h2>
 			<div class="popular-products_wrapper">
-				<div class="popular-products__arrow_prev nav-arrow nav-arrow_prev"><span></span></div>
-				<div class="popular-products__arrow_next nav-arrow nav-arrow_next"><span></span></div>
+				<button class="popular-products__arrow_prev nav-arrow nav-arrow_prev"><span></span></button>
+				<button class="popular-products__arrow_next nav-arrow nav-arrow_next"><span></span></button>
 				<div class="popular-products__nav-dots nav-dots">
 					<span
 						class="popular-products__nav-dots-item nav-dots__item nav-dots__item_color-popular-products"></span>
@@ -564,11 +680,21 @@
 
 			<h2 class="title">ИНСТРУМЕНТЫ ПО ВИДАМ</h2>
 			<div class="types-instrument_wrapper">
+				<button class="types-instrument__arrow_prev nav-arrow nav-arrow_prev"><span></span></button>
+				<button class="types-instrument__arrow_next nav-arrow nav-arrow_next"><span></span></button>
+				<button class="types-instrument__arrow_down nav-arrow nav-arrow_down"><span></span></button>
+				<div class="types-instrument__nav-dots nav-dots">
+					<span
+						class="types-instrument__nav-dots-item nav-dots__item nav-dots__item_color-types-instrument"></span>
+					<span
+						class="types-instrument__nav-dots-item nav-dots__item nav-dots__item_color-types-instrument"></span>
+					<span
+						class="types-instrument__nav-dots-item nav-dots__item nav-dots__item_color-types-instrument"></span>
+				</div>
 				<div class="types-instrument">
 
 					<div class="types-instrument__item">
-						<a class="types-instrument__type-name" href="#">
-							<div class="types-instrument__icon"><img src="img/icon/guitar-icon.png" alt="Гитара"></div>
+						<a class="types-instrument__type-name types-instrument__type-name_guitar" href="#">
 							<h3 class="types-instrument_subtitle">Струнные</h3>
 						</a>
 						<ul class="types-instrument__sublist">
@@ -582,8 +708,7 @@
 					</div>
 
 					<div class="types-instrument__item">
-						<a class="types-instrument__type-name" href="#">
-							<div class="types-instrument__icon"><img src="img/icon/piano-icon.png" alt="Синтезатор"></div>
+						<a class="types-instrument__type-name types-instrument__type-name_synthesizer" href="#">
 							<h3 class="types-instrument_subtitle">Клавишные</h3>
 						</a>
 						<ul class="types-instrument__sublist">
@@ -596,8 +721,7 @@
 					</div>
 
 					<div class="types-instrument__item">
-						<a class="types-instrument__type-name" href="#">
-							<div class="types-instrument__icon"><img src="img/icon/drum--icon.png" alt="Барабан"></div>
+						<a class="types-instrument__type-name types-instrument__type-name_drum" href="#">
 							<h3 class="types-instrument_subtitle">Ударные</h3>
 						</a>
 						<ul class="types-instrument__sublist">
@@ -611,8 +735,7 @@
 					</div>
 
 					<div class="types-instrument__item">
-						<a class="types-instrument__type-name" href="#">
-							<div class="types-instrument__icon"><img src="img/icon/sax-icon.png" alt="Саксофон"></div>
+						<a class="types-instrument__type-name types-instrument__type-name_brass" href="#">
 							<h3 class="types-instrument_subtitle">Духовые</h3>
 						</a>
 						<ul class="types-instrument__sublist">
@@ -626,8 +749,7 @@
 					</div>
 
 					<div class="types-instrument__item">
-						<a class="types-instrument__type-name" href="#">
-							<div class="types-instrument__icon"><img src="img/icon/accordion-icon.png" alt="Аккордеон"></div>
+						<a class="types-instrument__type-name types-instrument__type-name_accordion" href="#">
 							<h3 class="types-instrument_subtitle">Язычковые</h3>
 						</a>
 						<ul class="types-instrument__sublist">
@@ -641,8 +763,7 @@
 					</div>
 
 					<div class="types-instrument__item">
-						<a class="types-instrument__type-name" href="#">
-							<div class="types-instrument__icon"><img src="img/icon/guitar-icon.png" alt="Гитара"></div>
+						<a class="types-instrument__type-name types-instrument__type-name_guitar" href="#">
 							<h3 class="types-instrument_subtitle">Струнные</h3>
 						</a>
 						<ul class="types-instrument__sublist">
@@ -656,8 +777,7 @@
 					</div>
 
 					<div class="types-instrument__item">
-						<a class="types-instrument__type-name" href="#">
-							<div class="types-instrument__icon"><img src="img/icon/piano-icon.png" alt="Синтезатор"></div>
+						<a class="types-instrument__type-name types-instrument__type-name_synthesizer" href="#">
 							<h3 class="types-instrument_subtitle">Клавишные</h3>
 						</a>
 						<ul class="types-instrument__sublist">
@@ -670,8 +790,7 @@
 					</div>
 
 					<div class="types-instrument__item">
-						<a class="types-instrument__type-name" href="#">
-							<div class="types-instrument__icon"><img src="img/icon/drum--icon.png" alt="Барабан"></div>
+						<a class="types-instrument__type-name types-instrument__type-name_drum" href="#">
 							<h3 class="types-instrument_subtitle">Ударные</h3>
 						</a>
 						<ul class="types-instrument__sublist">
@@ -685,8 +804,7 @@
 					</div>
 
 					<div class="types-instrument__item">
-						<a class="types-instrument__type-name" href="#">
-							<div class="types-instrument__icon"><img src="img/icon/sax-icon.png" alt="Саксофон"></div>
+						<a class="types-instrument__type-name types-instrument__type-name_brass" href="#">
 							<h3 class="types-instrument_subtitle">Духовые</h3>
 						</a>
 						<ul class="types-instrument__sublist">
@@ -700,8 +818,7 @@
 					</div>
 
 					<div class="types-instrument__item">
-						<a class="types-instrument__type-name" href="#">
-							<div class="types-instrument__icon"><img src="img/icon/accordion-icon.png" alt="Аккордеон"></div>
+						<a class="types-instrument__type-name types-instrument__type-name_accordion" href="#">
 							<h3 class="types-instrument_subtitle">Язычковые</h3>
 						</a>
 						<ul class="types-instrument__sublist">
@@ -713,12 +830,13 @@
 							<li><a href="#">Тромбоны</a></li>
 						</ul>
 					</div>
+
 				</div>
 			</div>
 
 			<div class="premium-offers">
-				<div class="premium-offers__arrow_prev nav-arrow nav-arrow_prev"><span></span></div>
-				<div class="premium-offers__arrow_next nav-arrow nav-arrow_next"><span></span></div>
+				<button class="premium-offers__arrow_prev nav-arrow nav-arrow_prev"><span></span></button>
+				<button class="premium-offers__arrow_next nav-arrow nav-arrow_next"><span></span></button>
 				<div class="premium-offers__nav-dots nav-dots">
 					<span class="premium-offers__nav-dots-item nav-dots__item nav-dots__item_color-premium-offers"></span>
 					<span class="premium-offers__nav-dots-item nav-dots__item nav-dots__item_color-premium-offers"></span>
@@ -737,10 +855,10 @@
 					</div>
 				</a>
 
-				<a class="premium-offers__item">
+				<a class="premium-offers__item premium-offers__item_center">
 					<img class="premium-offers__photo" src="img/11.png" alt="">
 					<div class="premium-offers__about">
-						<h2 class="title premium-offers__title">ЭЛЕКТРОННОЕ ПИАНИНО</h2>
+						<h2 class="title premium-offers__title premium-offers__title_center">ЭЛЕКТРОННОЕ ПИАНИНО</h2>
 						<div class="premium-offers__model">CASIO CDP 320K</div>
 						<div class="premium-offers__price">
 							<span class="premium-offers__price_new">38 890 ₽</span><span
@@ -802,8 +920,10 @@
 		<footer class="footer">
 			<div class="footer_top">
 				<ul class="footer-menu">
-					<li class="footer-menu__item">Покупателям
-						<label class="footer-menu__tick" for="footer-menu-checkbox-buyer"><span></span></label>
+					<li class="footer-menu__item">
+						<div class="footer-menu__title">Покупателям
+							<label class="footer-menu__tick" for="footer-menu-checkbox-buyer"><span></span></label>
+						</div>
 						<ul class="footer-menu__submenu footer-menu__submenu_buyer">
 							<li><a class="footer-menu__item_sublist" href="#">Оплата и доставка</a></li>
 							<li><a class="footer-menu__item_sublist" href="#">Обратная связь</a></li>
@@ -812,16 +932,20 @@
 							<li><a class="footer-menu__item_sublist" href="#">Правовая информация</a></li>
 						</ul>
 					</li>
-					<li class="footer-menu__item">Партнерам
-						<label class="footer-menu__tick" for="footer-menu-checkbox-partners"><span></span></label>
+					<li class="footer-menu__item">
+						<div class="footer-menu__title">Партнерам
+							<label class="footer-menu__tick" for="footer-menu-checkbox-partners"><span></span></label>
+						</div>
 						<ul class="footer-menu__submenu footer-menu__submenu_partners">
 							<li><a class="footer-menu__item_sublist" href="#">Начать сотрудничество</a></li>
 							<li><a class="footer-menu__item_sublist" href="#">Консультация</a></li>
 							<li><a class="footer-menu__item_sublist" href="#">Справка</a></li>
 						</ul>
 					</li>
-					<li class="footer-menu__item">Компания
-						<label class="footer-menu__tick" for="footer-menu-checkbox-company"><span></span></label>
+					<li class="footer-menu__item">
+						<div class="footer-menu__title">Компания
+							<label class="footer-menu__tick" for="footer-menu-checkbox-company"><span></span></label>
+						</div>
 						<ul class="footer-menu__submenu footer-menu__submenu_company">
 							<li><a class="footer-menu__item_sublist" href="#">О нас</a></li>
 							<li><a class="footer-menu__item_sublist" href="#">Реквизиты</a></li>
@@ -829,34 +953,34 @@
 							<li><a class="footer-menu__item_sublist" href="#">Вакансии</a></li>
 						</ul>
 					</li>
-					</li>
 				</ul>
-				<ul class="apps">
-					<li class="apps__title">Приложения</li>
-					<li class="apps__item g-play"><a href="#"><img src="img/g-play.png"></a></li>
-					<li class="apps__item app-store"><a href="#"><img src="img/app-store.png"></a></li>
-				</ul>
+				<div class="apps">
+					<div class="apps__title">Приложения</div>
+					<a class="apps__item apps__item_g-play" href="#"></a>
+					<a class="apps__item apps__item_app-store" href="#"></a>
+				</div>
 			</div>
 			<div class="footer_bottom">
 				<a class="phone footer__phone" href="tel: +7 800 611 00 97" class="phone">8 800 611 00 97</a>
-				<ul class="socialnet footer__socialnet">
-					<li class="socialnet__item"><a href="#"><img class="vk" src="img/social/vkontakte-icon.svg"
-								alt="Вконтакте"></a></li>
-					<li class="socialnet__item"><a href="#"><img class="fb" src="img/social/facebook-icon.svg"
-								alt="Фэйсбук"></a></li>
-					<li class="socialnet__item"><a href="#"><img class="instagram" src="img/social/instagram-icon.svg"
-								alt="Инстаграм"></a>
-					</li>
-					<li class="socialnet__item"><a href="#"><img class="telegram" src="img/social/telegram-icon.svg"
-								alt="Телеграм"></a>
-					</li>
-				</ul>
+				<div class="socialnet footer__socialnet">
+					<a class="socialnet__item socialnet__item_vk" href="https://vk.com"></a>
+					<a class="socialnet__item socialnet__item_facebook" href="https://www.facebook.com"></a>
+					<a class="socialnet__item socialnet__item_instagram" href="https://www.instagram.com/"></a>
+					<a class="socialnet__item socialnet__item_telegram" href="https://web.telegram.org"></a>
+				</div>
 				<div class="copyright">© 2008–2020 ООО «ЛМАРКТ».</div>
 			</div>
 		</footer>
 	</div>
-	<script src="scripts/carausel.js"></script>
-	<script src="scripts/carauselOffset.js"></script>
+	<!-- vendor scripts -->
+	<!-- <script src="lib/jquery/jquery-3.5.1.min.js"></script>
+	<script src="lib/OwlCarousel2/owl.carousel.min.js"></script> -->
+
+	<!-- user scripts -->
+	<!-- <script src="js/carausel.js"></script>
+	<script src="js/main.js"></script> -->
+
+
 </body>
 
 </html>
