@@ -6,7 +6,6 @@ function makeCarausel(config) {
 	const arrowPrevClassName = config.arrowPrevSelector;
 	const toggleClassName = config.navDotActiveClass;
 	const disableWidth = config.disableWidth;
-	console.log(disableWidth)
 
 	let items = document.querySelectorAll(itemClassName)
 	let prev = document.querySelector(arrowPrevClassName)
