@@ -2,7 +2,7 @@ $(document).ready(function () {
 	let $popularCategories = $("#popular-categories");
 	var restrictionWidth = 1000;
 	$popularCategories.on('initialized.owl.carousel', function () {
-		if (screen.width <= restrictionWidth) {
+		if (screen.width < restrictionWidth) {
 			$popularCategories.addClass("first-item-margin-left_popularCategories");
 		}
 	});
@@ -133,7 +133,12 @@ $(document).ready(function () {
 					margin: 15,
 
 				},
-				1000: {
+				1025: {
+					items: 4,
+					nav: true
+
+				},
+				1225: {
 					items: 5,
 					margin: 24,
 					nav: true
