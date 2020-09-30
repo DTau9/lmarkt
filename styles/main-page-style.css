@@ -94,6 +94,7 @@ input[type=checkbox] {
 
 .profile {
 	background-image: url(../img/icon/profile-icon.svg);
+	max-width       : 77rem;
 }
 
 .navbar__item_cart {
@@ -493,7 +494,7 @@ input[type=checkbox] {
 	top             : 47rem;
 	transform       : translateY(-200%);
 	transition      : 0.15s ease-in;
-	right           : -56rem;
+	right           : -17.7vw;
 	width           : 284rem;
 	z-index         : 1;
 }
