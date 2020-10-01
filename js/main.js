@@ -81,14 +81,15 @@ $(document).ready(function () {
 		}
 	);
 
-	popularProducts.on('mousewheel', '.owl-stage', function (e) {
-		if (e.originalEvent.wheelDelta > 0 || e.originalEvent.detail < 0) {
-			popularProducts.trigger('next.owl');
-		} else {
-			popularProducts.trigger('prev.owl');
-		}
-		e.preventDefault();
-	});
+	// скролл колёсиком мыши
+	// popularProducts.on('mousewheel', '.owl-stage', function (e) {
+	// 	if (e.originalEvent.wheelDelta > 0 || e.originalEvent.detail < 0) {
+	// 		popularProducts.trigger('next.owl');
+	// 	} else {
+	// 		popularProducts.trigger('prev.owl');
+	// 	}
+	// 	e.preventDefault();
+	// });
 
 	// !-----------------------------------------------
 
