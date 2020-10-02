@@ -1507,7 +1507,7 @@ input[type=checkbox] {
 	opacity       : 0.5;
 }
 
-@media (min-device-width : 480px) and (max-device-width : 767px) {
+@media (min-width : 480px) and (max-width : 767px) {
 	.navbar_bottom {
 		height: 50rem;
 	}
@@ -1543,7 +1543,7 @@ input[type=checkbox] {
 	}
 }
 
-@media (min-device-width : 768px) and (max-device-width : 1024px) {
+@media (min-width : 768px) and (max-width : 1024px) {
 	html {
 		font-size: 1.3px;
 	}
@@ -1579,7 +1579,7 @@ input[type=checkbox] {
 	}
 }
 
-@media only screen and (min-device-width: 1025px) {
+@media only screen and (min-width: 1025px) {
 
 	.title {
 		text-align : left;
