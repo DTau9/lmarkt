@@ -1,6 +1,6 @@
 $(document).ready(function () {
 	let $popularCategories = $("#popular-categories");
-	var restrictionWidth = 1000;
+	var restrictionWidth = 1024;
 	$popularCategories.on('initialized.owl.carousel', function () {
 		if (screen.width < restrictionWidth) {
 			$popularCategories.addClass("first-item-margin-left_popularCategories");
@@ -25,6 +25,27 @@ $(document).ready(function () {
 			$popularCategories.removeClass("popular-categories-invisibleAfter")
 		}
 	});
+
+	$popularCategories.on("resize.owl.carousel", function () {
+		if (screen.width > restrictionWidth) {
+			$popularCategories.removeClass("popular-categories-invisibleBefore");
+			$popularCategories.addClass("popular-categories-invisibleAfter");
+			return;
+		}
+		if ($firstItemPopularCategories.hasClass("active")) {
+			$popularCategories.addClass("first-item-margin-left_popularCategories");
+			$popularCategories.removeClass("popular-categories-invisibleBefore");
+		} else {
+			$popularCategories.removeClass("first-item-margin-left_popularCategories");
+			$popularCategories.addClass("popular-categories-invisibleBefore");
+		};
+
+		if ($lastItemPopularCategories.hasClass("active")) {
+			$popularCategories.addClass("popular-categories-invisibleAfter");
+		} else {
+			$popularCategories.removeClass("popular-categories-invisibleAfter")
+		}
+	})
 
 	$popularCategories.owlCarousel(
 		{
@@ -119,6 +140,27 @@ $(document).ready(function () {
 			$typesInstrument.removeClass("types-instrument-invisibleAfter")
 		}
 	});
+
+	$typesInstrument.on("resize.owl.carousel", function () {
+		if (screen.width > restrictionWidth) {
+			$typesInstrument.removeClass("types-instrument-invisibleBefore");
+			$typesInstrument.removeClass("types-instrument-invisibleAfter")
+			return;
+		}
+		if ($firstItemTypesInstrument.hasClass("active")) {
+			$typesInstrument.addClass("first-item-margin-left_typesInstrument");
+			$typesInstrument.removeClass("types-instrument-invisibleBefore");
+		} else {
+			$typesInstrument.removeClass("first-item-margin-left_typesInstrument");
+			$typesInstrument.addClass("types-instrument-invisibleBefore");
+		};
+
+		if ($lastItemTypesInstrument.hasClass("active")) {
+			$typesInstrument.addClass("types-instrument-invisibleAfter");
+		} else {
+			$typesInstrument.removeClass("types-instrument-invisibleAfter")
+		}
+	})
 
 	$typesInstrument.owlCarousel(
 		{
