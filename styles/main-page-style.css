@@ -59,6 +59,7 @@ input[type=checkbox] {
 .navbar_top {
 	background-color: #FFF8FE;
 	height          : 47rem;
+	position        : relative;
 }
 
 .navbar__item {
@@ -70,7 +71,6 @@ input[type=checkbox] {
 	height             : 47rem;
 	justify-content    : flex-end;
 	max-width          : 77rem;
-	position           : relative;
 	text-align         : center;
 }
 
@@ -96,6 +96,7 @@ input[type=checkbox] {
 .profile {
 	background-image: url(../img/icon/profile-icon.svg);
 	max-width       : 77rem;
+	position        : relative;
 }
 
 .navbar__item_cart {
@@ -148,21 +149,23 @@ input[type=checkbox] {
 .location__select-city,
 .catalog-list__sublist {
 	display: none;
+	width  : 100%;
 }
 
 .nav-menu {
-	background-color: white;
-	box-sizing      : border-box;
-	display         : block;
-	left            : 0;
-	text-align      : left;
-	top             : 47rem;
-	padding         : 4rem 0 28rem;
-	position        : absolute;
-	transform       : translateY(-150%);
-	transition      : 0.3s ease-out;
-	width           : 100vw;
-	z-index         : 1;
+	background-color   : white;
+	box-sizing         : border-box;
+	display            : block;
+	left               : 0;
+	text-align         : left;
+	top                : 47rem;
+	padding            : 4rem 0 28rem;
+	position           : absolute;
+	right              : 0;
+	transform          : translateY(-150%);
+	transition         : 0.3s ease-out;
+	/* width           : calc(100vw - (100vw - 100%)); */
+	z-index            : 1;
 }
 
 .nav-menu__item {
@@ -201,9 +204,9 @@ input[type=checkbox] {
 
 .catalog-list__item,
 .catalog-list__item_sublist {
-	box-sizing: border-box;
-	position  : relative;
-	width     : 100vw;
+	box-sizing   : border-box;
+	position     : relative;
+	/* width     : 100vw; */
 }
 
 .catalog-list__item_select,
@@ -1553,7 +1556,7 @@ input[type=checkbox] {
 	}
 
 	.profile__list {
-		right: -103%;
+		right: -100%;
 		width: 235rem;
 	}
 
@@ -1598,6 +1601,7 @@ input[type=checkbox] {
 		position: relative;
 	}
 
+	.navbar_top,
 	.navbar_bottom,
 	.navbar__item {
 		position: unset;
@@ -1778,7 +1782,6 @@ input[type=checkbox] {
 		box-sizing         : border-box;
 		flex-grow          : 0;
 		height             : 100%;
-		padding-bottom     : 14rem;
 	}
 
 	.navbar__item_favourites:hover,
@@ -1817,10 +1820,11 @@ input[type=checkbox] {
 	.nav-menu {
 		border-radius: 3rem;
 		height       : 878rem;
+		left         : 10rem;
 		padding      : 0rem;
 		top          : 98rem;
 		overflow     : hidden;
-		right        : 0;
+		right        : 10rem;
 		width        : initial;
 	}
 
@@ -2152,7 +2156,7 @@ input[type=checkbox] {
 
 	.navbar__caption {
 		line-height  : 9rem;
-		margin-bottom: 1rem;
+		margin-bottom: 15rem;
 	}
 
 	.profile {
