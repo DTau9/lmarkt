@@ -146,7 +146,6 @@ input[type=checkbox] {
 	display: none;
 }
 
-.location__select-city,
 .catalog-list__sublist {
 	display: none;
 	width  : 100%;
@@ -598,6 +597,8 @@ input[type=checkbox] {
 	position                 : absolute;
 	text-align               : left;
 	top                      : 40rem;
+	transform                : translateY(-200%);
+	transition               : 0.15s ease-in;
 	right                    : 0;
 	z-index                  : 1;
 }
@@ -652,7 +653,7 @@ input[type=checkbox] {
 }
 
 #location-checkbox:checked~.header .location__select-city {
-	display: initial;
+	transform: translateY(0);
 }
 
 #location-checkbox:checked~.main-content-layer::after {
