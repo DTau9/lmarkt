@@ -74,8 +74,6 @@ input[type=checkbox] {
 	text-align         : center;
 }
 
-/* !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!-----!!!!!!!!!!!!!!!!!!!!!!!!--------!!!!!!!!!!!!!! */
-
 .navbar__item_nav-menu {
 	background-image   : url(../img/icon/catalogpurple-icon.svg);
 	background-position: 50% 8rem;
@@ -735,12 +733,6 @@ input[type=checkbox] {
 	width           : 13rem;
 }
 
-/* ! header end */
-
-/* ! main start */
-
-/* !навигационные элементы начало */
-
 .nav-arrow {
 	align-items     : center;
 	background-color: #FFF8FE;
@@ -822,8 +814,6 @@ input[type=checkbox] {
 	background: #A0148E;
 	opacity   : 0.6;
 }
-
-/* ! навигационные элементы конец */
 
 /* ! класс заполнения точки */
 
@@ -1394,10 +1384,6 @@ input[type=checkbox] {
 	object-fit: scale-down;
 }
 
-/* !main end */
-
-/* ! footer */
-
 .footer {
 	background: #FFF8FE;
 	padding   : 25rem 20rem 13rem;
@@ -1926,7 +1912,7 @@ input[type=checkbox] {
 
 	/* ------------------------------ чекбоксы каталога -----------------------------*/
 
-	/* --------------------------кнопки открытия списков-------------------------------- */
+	/* --------------------------кнопки открытия списков---------------------------- */
 
 	input[id^="catalog-list-checkbox-"]:checked~.header .catalog-list {
 		height: 100% !important;
