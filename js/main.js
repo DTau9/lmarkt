@@ -2,13 +2,13 @@ $(document).ready(function () {
 	let $popularCategories = $("#popular-categories");
 	var restrictionWidth = 1024;
 	$popularCategories.on('initialized.owl.carousel', function () {
-		if (screen.width < restrictionWidth) {
+		if ($popularCategories.width() < restrictionWidth) {
 			$popularCategories.addClass("first-item-margin-left_popularCategories");
 		}
 	});
 
 	$popularCategories.on('translated.owl.carousel', function () {
-		if (screen.width > restrictionWidth) {
+		if ($popularCategories.width() > restrictionWidth) {
 			return;
 		}
 		if ($firstItemPopularCategories.hasClass("active")) {
@@ -27,7 +27,7 @@ $(document).ready(function () {
 	});
 
 	$popularCategories.on("resize.owl.carousel", function () {
-		if (screen.width > restrictionWidth) {
+		if ($popularCategories.width() > restrictionWidth) {
 			$popularCategories.removeClass("popular-categories-invisibleBefore");
 			$popularCategories.addClass("popular-categories-invisibleAfter");
 			return;
@@ -117,13 +117,13 @@ $(document).ready(function () {
 	let $typesInstrument = $("#types-instrument");
 
 	$typesInstrument.on('initialized.owl.carousel', function () {
-		if (screen.width <= restrictionWidth) {
+		if ($typesInstrument.width() <= restrictionWidth) {
 			$typesInstrument.addClass("first-item-margin-left_typesInstrument");
 		}
 	});
 
 	$typesInstrument.on('translated.owl.carousel', function () {
-		if (screen.width > restrictionWidth) {
+		if ($typesInstrument.width() > restrictionWidth) {
 			return;
 		}
 		if ($firstItemTypesInstrument.hasClass("active")) {
@@ -142,7 +142,7 @@ $(document).ready(function () {
 	});
 
 	$typesInstrument.on("resize.owl.carousel", function () {
-		if (screen.width > restrictionWidth) {
+		if ($typesInstrument.width() > restrictionWidth) {
 			$typesInstrument.removeClass("types-instrument-invisibleBefore");
 			$typesInstrument.removeClass("types-instrument-invisibleAfter")
 			return;
