@@ -85,7 +85,7 @@ function makeCarausel(config) {
 
 	function checkDisableWidth() {
 		if (disableWidth !== undefined) {
-			if (screen.width > disableWidth) {
+			if (screen.width >= disableWidth) {
 				for (let i = 0; i < items.length; i++) {
 					items[i].style.display = "block";
 				}

@@ -1,51 +1,55 @@
 $(document).ready(function () {
+	const $body = $('body');
 	let $popularCategories = $("#popular-categories");
 	var restrictionWidth = 1024;
 	$popularCategories.on('initialized.owl.carousel', function () {
-		if ($popularCategories.width() < restrictionWidth) {
+		if ($body.width() < restrictionWidth) {
 			$popularCategories.addClass("first-item-margin-left_popularCategories");
 		}
 	});
 
 	$popularCategories.on('translated.owl.carousel', function () {
-		if ($popularCategories.width() > restrictionWidth) {
+		if ($body.width() >= restrictionWidth) {
 			return;
-		}
-		if ($firstItemPopularCategories.hasClass("active")) {
-			$popularCategories.addClass("first-item-margin-left_popularCategories");
-			$popularCategories.removeClass("popular-categories-invisibleBefore");
 		} else {
-			$popularCategories.removeClass("first-item-margin-left_popularCategories");
-			$popularCategories.addClass("popular-categories-invisibleBefore");
-		};
+			if ($firstItemPopularCategories.hasClass("active")) {
+				$popularCategories.addClass("first-item-margin-left_popularCategories");
+				$popularCategories.removeClass("popular-categories-invisibleBefore");
+			} else {
+				$popularCategories.removeClass("first-item-margin-left_popularCategories");
+				$popularCategories.addClass("popular-categories-invisibleBefore");
+			};
 
-		if ($lastItemPopularCategories.hasClass("active")) {
-			$popularCategories.addClass("popular-categories-invisibleAfter");
-		} else {
-			$popularCategories.removeClass("popular-categories-invisibleAfter")
+			if ($lastItemPopularCategories.hasClass("active")) {
+				$popularCategories.addClass("popular-categories-invisibleAfter");
+			} else {
+				$popularCategories.removeClass("popular-categories-invisibleAfter")
+			}
 		}
 	});
 
 	$popularCategories.on("resize.owl.carousel", function () {
-		if ($popularCategories.width() > restrictionWidth) {
+		if ($body.width() >= restrictionWidth) {
+			$popularCategories.removeClass("first-item-margin-left_popularCategories");
 			$popularCategories.removeClass("popular-categories-invisibleBefore");
 			$popularCategories.addClass("popular-categories-invisibleAfter");
 			return;
-		}
-		if ($firstItemPopularCategories.hasClass("active")) {
-			$popularCategories.addClass("first-item-margin-left_popularCategories");
-			$popularCategories.removeClass("popular-categories-invisibleBefore");
 		} else {
-			$popularCategories.removeClass("first-item-margin-left_popularCategories");
-			$popularCategories.addClass("popular-categories-invisibleBefore");
-		};
+			if ($firstItemPopularCategories.hasClass("active")) {
+				$popularCategories.addClass("first-item-margin-left_popularCategories");
+				$popularCategories.removeClass("popular-categories-invisibleBefore");
+			} else {
+				$popularCategories.removeClass("first-item-margin-left_popularCategories");
+				$popularCategories.addClass("popular-categories-invisibleBefore");
+			};
 
-		if ($lastItemPopularCategories.hasClass("active")) {
-			$popularCategories.addClass("popular-categories-invisibleAfter");
-		} else {
-			$popularCategories.removeClass("popular-categories-invisibleAfter")
+			if ($lastItemPopularCategories.hasClass("active")) {
+				$popularCategories.addClass("popular-categories-invisibleAfter");
+			} else {
+				$popularCategories.removeClass("popular-categories-invisibleAfter")
+			}
 		}
-	})
+	});
 
 	$popularCategories.owlCarousel(
 		{
@@ -60,7 +64,7 @@ $(document).ready(function () {
 					margin: 15,
 					nav: false
 				},
-				1000: {
+				1024: {
 					items: 4,
 					margin: 24,
 					nav: true
@@ -71,7 +75,6 @@ $(document).ready(function () {
 
 	var $firstItemPopularCategories = $("#popular-categories .owl-item:first-child");
 	var $lastItemPopularCategories = $("#popular-categories .owl-item:last-child");
-
 
 
 
@@ -117,48 +120,51 @@ $(document).ready(function () {
 	let $typesInstrument = $("#types-instrument");
 
 	$typesInstrument.on('initialized.owl.carousel', function () {
-		if ($typesInstrument.width() <= restrictionWidth) {
+		if ($body.width() < restrictionWidth) {
 			$typesInstrument.addClass("first-item-margin-left_typesInstrument");
 		}
 	});
 
 	$typesInstrument.on('translated.owl.carousel', function () {
-		if ($typesInstrument.width() > restrictionWidth) {
+		if ($body.width() >= restrictionWidth) {
 			return;
-		}
-		if ($firstItemTypesInstrument.hasClass("active")) {
-			$typesInstrument.addClass("first-item-margin-left_typesInstrument");
-			$typesInstrument.removeClass("types-instrument-invisibleBefore");
 		} else {
-			$typesInstrument.removeClass("first-item-margin-left_typesInstrument");
-			$typesInstrument.addClass("types-instrument-invisibleBefore");
-		};
+			if ($firstItemTypesInstrument.hasClass("active")) {
+				$typesInstrument.addClass("first-item-margin-left_typesInstrument");
+				$typesInstrument.removeClass("types-instrument-invisibleBefore");
+			} else {
+				$typesInstrument.removeClass("first-item-margin-left_typesInstrument");
+				$typesInstrument.addClass("types-instrument-invisibleBefore");
+			};
 
-		if ($lastItemTypesInstrument.hasClass("active")) {
-			$typesInstrument.addClass("types-instrument-invisibleAfter");
-		} else {
-			$typesInstrument.removeClass("types-instrument-invisibleAfter")
+			if ($lastItemTypesInstrument.hasClass("active")) {
+				$typesInstrument.addClass("types-instrument-invisibleAfter");
+			} else {
+				$typesInstrument.removeClass("types-instrument-invisibleAfter")
+			}
 		}
 	});
 
 	$typesInstrument.on("resize.owl.carousel", function () {
-		if ($typesInstrument.width() > restrictionWidth) {
+		if ($body.width() >= restrictionWidth) {
+			$typesInstrument.removeClass("first-item-margin-left_typesInstrument");
 			$typesInstrument.removeClass("types-instrument-invisibleBefore");
 			$typesInstrument.removeClass("types-instrument-invisibleAfter")
 			return;
-		}
-		if ($firstItemTypesInstrument.hasClass("active")) {
-			$typesInstrument.addClass("first-item-margin-left_typesInstrument");
-			$typesInstrument.removeClass("types-instrument-invisibleBefore");
 		} else {
-			$typesInstrument.removeClass("first-item-margin-left_typesInstrument");
-			$typesInstrument.addClass("types-instrument-invisibleBefore");
-		};
+			if ($firstItemTypesInstrument.hasClass("active")) {
+				$typesInstrument.addClass("first-item-margin-left_typesInstrument");
+				$typesInstrument.removeClass("types-instrument-invisibleBefore");
+			} else {
+				$typesInstrument.removeClass("first-item-margin-left_typesInstrument");
+				$typesInstrument.addClass("types-instrument-invisibleBefore");
+			};
 
-		if ($lastItemTypesInstrument.hasClass("active")) {
-			$typesInstrument.addClass("types-instrument-invisibleAfter");
-		} else {
-			$typesInstrument.removeClass("types-instrument-invisibleAfter")
+			if ($lastItemTypesInstrument.hasClass("active")) {
+				$typesInstrument.addClass("types-instrument-invisibleAfter");
+			} else {
+				$typesInstrument.removeClass("types-instrument-invisibleAfter")
+			}
 		}
 	})
 
@@ -176,7 +182,7 @@ $(document).ready(function () {
 					margin: 15,
 
 				},
-				1025: {
+				1024: {
 					items: 4,
 					nav: true
 
