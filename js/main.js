@@ -1,15 +1,15 @@
 $(document).ready(function () {
-	const $body = $('body');
+	const $main = $('.main');
 	let $popularCategories = $("#popular-categories");
 	var restrictionWidth = 1024;
 	$popularCategories.on('initialized.owl.carousel', function () {
-		if ($body.width() < restrictionWidth) {
+		if ($main.outerWidth() < restrictionWidth) {
 			$popularCategories.addClass("first-item-margin-left_popularCategories");
 		}
 	});
 
 	$popularCategories.on('translated.owl.carousel', function () {
-		if ($body.width() >= restrictionWidth) {
+		if ($main.outerWidth() >= restrictionWidth) {
 			return;
 		} else {
 			if ($firstItemPopularCategories.hasClass("active")) {
@@ -29,7 +29,7 @@ $(document).ready(function () {
 	});
 
 	$popularCategories.on("resize.owl.carousel", function () {
-		if ($body.width() >= restrictionWidth) {
+		if ($main.outerWidth() >= restrictionWidth) {
 			$popularCategories.removeClass("first-item-margin-left_popularCategories");
 			$popularCategories.removeClass("popular-categories-invisibleBefore");
 			$popularCategories.addClass("popular-categories-invisibleAfter");
@@ -120,13 +120,13 @@ $(document).ready(function () {
 	let $typesInstrument = $("#types-instrument");
 
 	$typesInstrument.on('initialized.owl.carousel', function () {
-		if ($body.width() < restrictionWidth) {
+		if ($main.outerWidth() < restrictionWidth) {
 			$typesInstrument.addClass("first-item-margin-left_typesInstrument");
 		}
 	});
 
 	$typesInstrument.on('translated.owl.carousel', function () {
-		if ($body.width() >= restrictionWidth) {
+		if ($main.outerWidth() >= restrictionWidth) {
 			return;
 		} else {
 			if ($firstItemTypesInstrument.hasClass("active")) {
@@ -146,7 +146,7 @@ $(document).ready(function () {
 	});
 
 	$typesInstrument.on("resize.owl.carousel", function () {
-		if ($body.width() >= restrictionWidth) {
+		if ($main.outerWidth() >= restrictionWidth) {
 			$typesInstrument.removeClass("first-item-margin-left_typesInstrument");
 			$typesInstrument.removeClass("types-instrument-invisibleBefore");
 			$typesInstrument.removeClass("types-instrument-invisibleAfter")
