@@ -135,6 +135,7 @@ input[type=checkbox] {
 
 .navbar__caption {
 	color  : #A0148E;
+	display: block;
 	font   : 9rem/14rem "Titillium Web", sans-serif;
 	margin : 4rem 1rem 4rem;
 	opacity: 0.6;
@@ -564,6 +565,7 @@ input[type=checkbox] {
 
 .location__current-city {
 	color   : #A0148E;
+	display : block;
 	font    : bold 13rem/20rem "Titillium Web", sans-serif;
 	padding : 0 18rem 0 10rem;
 	position: relative;
@@ -2104,7 +2106,7 @@ input[type=checkbox] {
 
 	.navbar__catalog-caption {
 		color      : #fff;
-		display    : initial;
+		display    : block;
 		font-size  : 15rem;
 		font-weight: bold;
 		margin-left: 18%;
